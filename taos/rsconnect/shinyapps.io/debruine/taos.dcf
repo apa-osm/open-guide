@@ -1,0 +1,13 @@
+name: taos
+title: taos
+username:
+account: debruine
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6018809
+bundleId: 5767665
+url: https://debruine.shinyapps.io/taos/
+when: 1649184693.75336
+lastSyncTime: 1649184693.75339
+asMultiple: FALSE
+asStatic: FALSE

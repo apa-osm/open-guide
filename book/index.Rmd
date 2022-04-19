@@ -1,0 +1,35 @@
+--- 
+title: "APA Open Guide"
+author: "OSM"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+csl: include/apa.csl
+classoption: oneside
+geometry: margin=1in
+link-citations: yes
+description: "APA TOP info"
+url: https://debruine.github.io/APA_TOP/
+github-repo: debruine/APA_TOP
+cover-image: images/logos/logo.png
+apple-touch-icon: images/logos/apple-touch-icon.png
+apple-touch-icon-size: 180
+favicon: images/logos/favicon.ico
+---
+
+```{r cite-packages, include = FALSE}
+# automatically create a bib database for R packages
+# add any packages you want to cite here
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'tidyverse'
+), 'packages.bib')
+```
+
+# Overview {-}
+
+## TOP Guidelines
+
+* [APA Transparency and Openness Promotion](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion)
+* [COS TOP Guidelines](https://www.cos.io/initiatives/top-guidelines)
+* [OSF TOP Resources](https://osf.io/9f6gx/)
