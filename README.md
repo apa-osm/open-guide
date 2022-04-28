@@ -1,3 +1,3 @@
 # APA_TOP
 
-Website and shiny app for infomation about TOP guidelines at APA journals.
+Website and shiny app for information about TOP guidelines at APA journals.
