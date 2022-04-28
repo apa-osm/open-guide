@@ -6,6 +6,8 @@ $( document ).ready(function() {
   $("footer div.row div:eq(1) p").html(
     license + cite
   );
+  
+  $(".checklist li").prepend('<input type="checkbox" /> ');
 
   // open rdrr links externally
   $("a[href^='https://rdrr.io']").click(function(){

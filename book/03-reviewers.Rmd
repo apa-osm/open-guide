@@ -1,5 +1,9 @@
 # (PART) Reviewers {-}
 
+# Transparency and Openness Statements
+
+[What to Check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx) in transparency and openness statements for journals with TOP Level 1 or Level 2
+
 # Registered Reports
 
 # Preregistration
@@ -13,5 +17,3 @@
 # Authorship
 
 # Preprints
-
-# Transparency and Openness Statements

@@ -1,17 +1,198 @@
 # (PART) Editors {-}
 
+# Transparency and Openness Statements (TaOS)
+
+To enable readers to quickly and easily find open science disclosures, APA is recommending that authors include a subsection in their paper's Method section titled "Transparency and Openness". In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2. 
+
+## Example Transparency and Openness Statement
+
+```
+Preregistration: https://osf.io/xxxxx (study design only)
+Open Materials: N/A
+Open Data: Managed access at Databrary, http://doi.org/10.17910/XXXXXX
+Open Code: https://doi.org/10.5281/zenodo.0000000
+Citation: All secondary data/code/materials are cited
+Reporting Standards: APA JARS-Quant
+```
+    
+## Resources
+
+* [What to check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx) in transparency and openness statements for journals with TOP Level 1 or Level 2
+* [Introduction to TOP at APA for editors](https://www.dropbox.com/s/rx616egpte53o9m/TOP_at_APA_withScript.pdf)
+* [APA TOP](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion)
+* [OSF TOP](https://osf.io/9f6gx/)
+* [COS TOP](https://www.cos.io/initiatives/top-guidelines)
+* [TOP Mixed Level Journals](https://docs.google.com/document/d/10cMB2IT406gPAgCAORa5_UVI6Plrwvl4XjTsd0Ya_4s/edit)
+* [APA Journal Reporting Standards](https://apastyle.apa.org/jars)
+
+
+
 # Registered Reports
+
+From [Center for Open Science](https://www.cos.io/initiatives/registered-reports):
+
+> Registered Reports is a publishing format that emphasizes the importance of the research question and the quality of methodology by conducting peer review prior to data collection. High quality protocols are then provisionally accepted for publication if the authors follow through with the registered methodology.
+
+> This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings.
+
+While not all APA journals offer the registered reports format, they may receive submissions that have been through the registered reports process at [PCI Registered Reports](https://rr.peercommunityin.org/), which will make all reviews and editorial communication publicly available. Such submissions can be treated like papers with a [preregistration](#preregistration) (that has been through a rigorous open review process).
+
+## Resources
+
+* [OSF RR protocol registration](https://osf.io/rr/)
+* [PCI Registered Reports](https://rr.peercommunityin.org/)
+* [Center for Open Science RR Resources](https://www.cos.io/initiatives/registered-reports):
+    * [Fact sheet for editors](https://osf.io/jbeus/)
+    * [Template guide to authors and reviewers](https://osf.io/pukzy/)
+    * [Templates of reviewer invitation letters and author decision letters](https://osf.io/5adi7/)
+    * [Implementation checklist](https://osf.io/2m4ct/)
+
 
 # Preregistration
 
+Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study design plans, analysis plans, and/or theoretical predictions, depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A `r glossary("registration", def="the entry of a study in a publicly accessible study registry", link = F, show_def = F)` refers to the entry of a study in a publicly accessible study registry (see Appendix\ \@ref(registries)). A `r glossary("protocol", def="detailed plans outlining study methods, analysis plans and/or theoretical predictions", link = F, show_def = F)` refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
+
+When editing or reviewing a study that has been preregistered, here are a few things to consider. First, make sure that the study provides a link to the registry where it was preregistered. Self-hosted documents are not recommended. Second, the preregistration should be time-stamped and read-only. Finally, if resources permit, compare the study as reported in the final paper to the preregistered plan. If deviations from the plan have happened (which is typical), make sure that the deviations are transparently reported in the final paper so that readers can evaluate the consequences of the changes. Check to see if all planned analyses are reported in the paper, regardless of statistical significance of the outcome. 
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TaOS have the correct link to a publicly accessible version of the preregistration? (or a statement that preregistration is not available or N/A)
+* Does the TaOS specify whether the preregistration covers study design and/or analysis plan?
+* Is the preregistration hosted on a persistent archive? (see Appendix\ \@ref(registries))
+* Is the preregistration time-stamped?
+* Are all deviations from the plan transparently reported?
+* Are all planned analyses are reported in the paper, regardless of statistical significance of the outcome?
+
+:::
+
+## Resources
+
+* A template for preregistration of quantitative research in psychology: Report of the joint psychological societies preregistration task force [@bosnjak2021template]
+* Preregistration of secondary data analysis: A template and tutorial [@van2021preregistration]
+* Recommendations for increasing the transparency of analysis of preexisting data sets [@weston2019recommendations]
+* OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/)
+
+
 # Open Materials
+
+Provide research materials and description of procedures necessary to conduct an independent replication of the research.
+
+If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
+
+See Appendix\ \@ref(repositories) for a list of repositories.
+
 
 # Open Data
 
+Open data should include all variables, treatment conditions, and observations described in the manuscript, and provide a full account of the procedures used to collect, preprocess, clean, or generate the data. This data should allow for the reproduction of any plots, tables, or analyses reported in the manuscript.
+
+Refer authors to Section\ \@ref(author-data-tips) for tips and resources to make data open.
+
+## Data sharing issues
+
+While it is ideal to shared the raw data exactly as collected, and include instructions or code needed to clean and process it to the analysed data, this may not be possible due to privacy or ethical issues. However, there are solutions that allow for partial sharing.
+
+### Data are not anonymizable
+
+Data may be in a format, such as videos of interviews, where it is not possible to make them anonymous. Consider recommending that they be archived at a managed-access data archiving service, such as the [UK Data Service](https://ukdataservice.ac.uk/deposit-data/) or [Databrary](https://databrary.org/about/agreement.html). See Appendix\ \@ref(repositories) for a list of data repositories.
+
+### Anonymity could be compromised by data triangulation 
+
+Triangulation is when a combination of variables can uniquely identify some subjects, such as when there is only one person of a given age, gender, and ethnicity at the university of data collection. Measures can be taken such as omitting some data or redacting some levels of variables (e.g., grouping small-n groups under "Other"). An unredacted version can be stored in a managed-access archive.
+
+### Data are owned by others
+
+If all or a subset of the original data are secondary and do not have a license compatible with re-sharing, the authors should detail the steps needed to access the original data from the source. Authors should be encouraged to determine if it is possible to share processed data at a higher level. For example, if it is permissible to show a scatter plot of data in a publication, it should also be permissible to archive a tabular version of the data in that format. 
+
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TaOS have the correct link to a publicly accessible version of the data? (or a statement that data is not available or N/A)
+* Does the dataset contain the data required to produce all tables, plots, and analyses in the manuscript?
+    * If no, is any omission noted and explained?
+    * If raw data are shared, is there code/instructions for processing it?
+* Is the data saved in an accessible format? (CSV > Excel > SPSS)
+* Are the variables clearly explained?
+    * Is there a codebook?
+    * Are level values understandable?
+    * Are units clear?
+* Is data being shared ethically? Is there any personally identifiable data?
+* Is the data clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons) for reuse? (e.g., CC-BY)
+* Is the data hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+
+
+:::
+
 # Open Code
+
+Authors should provide program code, scripts, codebooks, and other documentation sufficient to precisely reproduce all published results.
+
+Refer authors to Section\ \@ref(author-code-tips) for tips and resources to make code open.
+
+If not all data needed to run the code can be shared, encourage authors to include simulated or redacted data so that the code can be tested by others. R packages such as [synthpop](https://www.synthpop.org.uk/), [faux](https://debruine.github.io/faux/), and [simstudy](https://kgoldfeld.github.io/simstudy/) can facilitate this. Faux also has a [web-based interface](https://shiny.psy.gla.ac.uk/debruine/fauxapp/) for simulating data from factorial designs (and soon for multilevel designs).
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TaOS have the correct link to a publicly accessible version of the code? (or a statement that code is not available or N/A)
+* Is there evidence (e.g., author statement, [CodeCheck](https://codecheck.org.uk/) confirmation, or editorial check) that the code contains all components needed to run?
+* Is the code clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons) for reuse? (e.g., CC-BY)
+* Is the code hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+
+:::
 
 # Authorship
 
+Per the APA [Equity, Diversity, and Inclusion Toolkit for Journal Editors](https://www.apa.org/pubs/authors/equity-diversity-inclusion-toolkit), 
+
+> Developed by the Consortia Advancing Standards in Research Administration (CASRAI) and National Information Standards Organization (NISO), CRediT is a high-level taxonomy comprised of 14 contributor roles, each of which can be modified by a degree of contribution (lead, equal, or supporting). The full taxonomy with definitions for each role can be found on the [NISO website](https://casrai.org/credit/). Author contribution statements promote equity and inclusion by specifically attributing contributions to each author. Author contribution statements likewise allow for the inclusion of collaborators whose contributions are less obviously represented in the written article, such as colleagues who may have provided input in early stages of an article or who handled more logistical aspects of the research. CRediT is likewise a useful tool for measuring potential inequities in the division of scientific labor by gender or other demographics. For instance, @lariviere2021investigating offer an analysis on the gender division of labor using CRediT data from PLOS journals.
+
+## Roles
+
+* Conceptualization: Ideas; formulation or evolution of overarching research goals and aims.
+* Data curation: Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later re-use.
+* Formal analysis: Application of statistical, mathematical, computational, or other formal techniques to analyse or synthesize study data.
+* Funding acquisition: Acquisition of the financial support for the project leading to this publication.
+* Investigation: Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.
+* Methodology: Development or design of methodology; creation of models.
+* Project administration: Management and coordination responsibility for the research activity planning and execution.
+* Resources: Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.
+* Software: Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.
+* Supervision: Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.
+* Validation: Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.
+* Visualization: Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.
+* Writing - original draft: Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).
+* Writing - review & editing: Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages.
+
+## Checklist
+
+::: {.checklist}
+
+* Does the manuscript include a statement of author roles?
+* Do author roles conform to the CRediT Taxonomy? 
+
+:::
+
+## Resources
+
+* [Casrai CRediT](https://casrai.org/credit/)
+* Contributorship, not authorship: Use CRediT to indicate who did what [@holcombe2019contributorship]
+* Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c)
+
 # Preprints
 
-# Transparency and Openness Statements
+Preprints are author copies of manuscripts prior to acceptance by a journal. Postprints are author copies of manuscripts after acceptance for publication by a journal. Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication.
+
+## Resources
+
+* [FAQs about preprints](http://blog.psyarxiv.com/2016/09/19/psyarxiv-faq/)
+* A guide to posting and managing preprints [@moshontz2021guide]
+* [PsyArXiv](https://psyarxiv.com/)
+* [PLoS Preprints](https://plos.org/open-science/preprints/)
+* In praise of preprints [@fry2019praise]
+

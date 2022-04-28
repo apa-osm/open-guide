@@ -3,30 +3,23 @@
 img { max-width: 100%; }
 
 :root {
-  --comp: #4864DB;
-  --dist: #10D4CF;
-  --rels: #8DEA74;
-  --time: #F5C748;
-  --cert: #EA4E11;
+  --A: #F1ECCE;
+  --B: #9FC2CC;
+  --C: #065192;
+  --D: #694D75;
+  --E: #331832;
 }
 
 /* rainbow borders */
 body {
   margin-top: 20px;
-  box-shadow: 0 -4px 0 0px var(--cert),
-              0 -8px 0 0px var(--time),
-              0 -12px 0 0px var(--rels),
-              0 -16px 0 0px var(--dist),
-              0 -20px 0 0px var(--comp);
+  box-shadow: 0 -4px 0 0px var(--A),
+              0 -8px 0 0px var(--B),
+              0 -12px 0 0px var(--C),
+              0 -16px 0 0px var(--D),
+              0 -20px 0 0px var(--E);
 }
 
-li.book-part { font-weight: bold; font-variant: small-caps;}
-li.book-part:nth-of-type(2) { color: var(--comp); }
-li.book-part:nth-of-type(9) { color: var(--dist); }
-li.book-part:nth-of-type(16) { color: var(--rels); }
-li.book-part:nth-of-type(23) { color: var(--time); }
-li.book-part:nth-of-type(30) { color: var(--cert); }
-
-svg { width: 100%; }
-
-
+.checklist ul {
+  list-style-type: none;
+}

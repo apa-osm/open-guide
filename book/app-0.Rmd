@@ -1,0 +1,44 @@
+# (APPENDIX) Appendices {-} 
+
+# References {-}
+
+<div id="refs"></div>
+
+
+# Glossary
+
+```{r, echo = FALSE}
+glossary_table(link = FALSE)
+```
+
+
+# Licenses
+
+* [Choosing between licenses](http://blog.psyarxiv.com/2018/05/14/licensing-work-psyarxiv/)
+* [Creative Commons Licenses](https://creativecommons.org)
+* [Open-source licenses](https://opensource.org/licenses) for code
+
+
+# Repositories
+
+(list under construction)
+
+* [UK Data Service](https://ukdataservice.ac.uk) - managed access
+* [Open Science Framework (OSF)](https://osf.io) - open, DOIs
+* [Harvard Dataverse](https://dataverse.harvard.edu/)
+* [Databrary](https://nyu.databrary.org/) - managed access
+* [Figshare](https://figshare.com/) - open, DOIs
+* [zenodo](https://zenodo.org/) - open, DOIs, can link to github
+* [GitHub](https://github.com) - open
+
+
+## Registries
+
+* [As Predicted](https://aspredicted.org/)
+* [ClinicaltTrials.gov](https://clinicaltrials.gov/)
+* [Open Science Framework (OSF)](https://osf.io)
+* [The American Economic Association's registry for randomized controlled trials](https://www.socialscienceregistry.org/)
+* [EGAP Design Registration](https://egap.org/registry-0/)
+* [Registry for International Development Impact Evaluations](http://ridie.3ieimpact.org/)
+* [OSF Registered Report protocol registration](https://osf.io/rr/)
+

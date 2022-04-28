@@ -4,7 +4,7 @@ author: "OSM"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [bib.bib]
 csl: include/apa.csl
 classoption: oneside
 geometry: margin=1in
@@ -18,15 +18,11 @@ apple-touch-icon-size: 180
 favicon: images/logos/favicon.ico
 ---
 
-```{r cite-packages, include = FALSE}
-# automatically create a bib database for R packages
-# add any packages you want to cite here
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'tidyverse'
-), 'packages.bib')
-```
-
 # Overview {-}
+
+This guide is for editors, reviewers, and authors of APA submission, to help them understand APA initiatives for open and transparent research, such as the TOP guidelines. The guiding principle is improving scientific rigour and increasing the transparency and accessibility of research, so do adjust any of the guidance for specific topics or circumstances in the service of those goals.
+
+**The guide is in draft form. We are starting with guidance for editors, and will be adding guidance for reviewers and authors soon.**
 
 ## TOP Guidelines
 
