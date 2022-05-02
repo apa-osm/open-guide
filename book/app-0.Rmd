@@ -21,7 +21,7 @@ glossary_table(link = FALSE)
 
 # Repositories
 
-See the [Registry of Research Data Repositories(https://www.re3data.org/) for detailed listings of data repositories by subject.
+See the [Registry of Research Data Repositories](https://www.re3data.org/) for detailed listings of data repositories by subject.
 
 This list is under construction and will summarise important attributes of the data repositories that are most relevant to APA journals. These attributes will include maximum file/project size, limitations, and costs.
 
@@ -44,7 +44,11 @@ repos <- tibble::tribble(
   mutate(service = glue::glue("<a href='{link}'>{name}</a>")) %>%
   select(service, doi, managed, versions, notes)
 
-DT::datatable(repos, escape = FALSE, rownames = FALSE)
+DT::datatable(repos, 
+              escape = FALSE, 
+              rownames = FALSE,
+              filter = "top",
+              options = list(dom="ltipr"))
 ```
 
 
