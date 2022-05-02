@@ -54,6 +54,13 @@ DT::datatable(repos,
 
 ## Registries
 
+[Comparison of Preregistration Platforms](https://osf.io/preprints/metaarxiv/zry2u) [@haroz_2022]
+
+```{r, echo = FALSE, fig.cap="Figure reproduced from Haroz, 2022"}
+knitr::include_graphics("images/reg-repos-haroz.png")
+```
+
+
 * [As Predicted](https://aspredicted.org/)
 * [ClinicalTrials.gov](https://clinicaltrials.gov/)
 * [Open Science Framework (OSF)](https://osf.io)
