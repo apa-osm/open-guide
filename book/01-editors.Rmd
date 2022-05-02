@@ -51,8 +51,8 @@ When editing or reviewing a study that has been preregistered, here are a few th
 
 ::: {.checklist}
 
-* Does the TaOS have the correct link to a publicly accessible version of the preregistration? (or a statement that preregistration is not available or N/A)
-* Does the TaOS specify whether the preregistration covers study design and/or analysis plan?
+* Does the TOP statement have the correct link to a publicly accessible version of the preregistration? (or a statement that preregistration is not available or N/A)
+* Does the TOP statement specify whether the preregistration covers study design and/or analysis plan?
 * Is the preregistration hosted on a persistent archive? (see Appendix\ \@ref(registries))
 * Is the preregistration time-stamped?
 * Are all deviations from the plan transparently reported?
@@ -104,7 +104,7 @@ If all or a subset of the original data are secondary and do not have a license 
 
 ::: {.checklist}
 
-* Does the TaOS have the correct link to a publicly accessible version of the data? (or a statement that data is not available or N/A)
+* Does the TOP statement have the correct link to a publicly accessible version of the data? (or a statement that data is not available or N/A)
 * Does the dataset contain the data required to produce all tables, plots, and analyses in the manuscript?
     * If no, is any omission noted and explained?
     * If raw data are shared, is there code/instructions for processing it?
@@ -132,7 +132,7 @@ If not all data needed to run the code can be shared, encourage authors to inclu
 
 ::: {.checklist}
 
-* Does the TaOS have the correct link to a publicly accessible version of the code? (or a statement that code is not available or N/A)
+* Does the TOP statement have the correct link to a publicly accessible version of the code? (or a statement that code is not available or N/A)
 * Is there evidence (e.g., author statement, [CodeCheck](https://codecheck.org.uk/) confirmation, or editorial check) that the code contains all components needed to run?
 * Is the code clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons) for reuse? (e.g., CC-BY)
 * Is the code hosted on a persistent archive? (see Appendix\ \@ref(repositories))
