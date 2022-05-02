@@ -1,19 +1,12 @@
 # (PART) Editors {-}
 
-# Transparency and Openness Statements (TaOS)
+# Transparency and Openness Statements
 
-To enable readers to quickly and easily find open science disclosures, APA is recommending that authors include a subsection in their paper's Method section titled "Transparency and Openness". In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2. 
+To enable readers to quickly and easily find open science disclosures, APA is requiring that authors include a subsection in their paper's Method section titled "Transparency and Openness". In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2. 
 
-## Example Transparency and Openness Statement
+## Example TOP Statement
 
-```
-Preregistration: https://osf.io/xxxxx (study design only)
-Open Materials: N/A
-Open Data: Managed access at Databrary, http://doi.org/10.17910/XXXXXX
-Open Code: https://doi.org/10.5281/zenodo.0000000
-Citation: All secondary data/code/materials are cited
-Reporting Standards: APA JARS-Quant
-```
+We report how we determined our sample size, all data exclusions, all manipulations, and all measures in the study, and we follow JARS [@kazak2018journal]. All data, analysis code, and research materials are available at [stable link to repository]. Data were analyzed using R, version 4.0.0 [@R] and the package lme4, version 1.1-27.1 [@lme4]. This study's design and its analysis were not pre-registered.
     
 ## Resources
 
@@ -35,7 +28,7 @@ From [Center for Open Science](https://www.cos.io/initiatives/registered-reports
 
 > This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings.
 
-While not all APA journals offer the registered reports format, they may receive submissions that have been through the registered reports process at [PCI Registered Reports](https://rr.peercommunityin.org/), which will make all reviews and editorial communication publicly available. Such submissions can be treated like papers with a [preregistration](#preregistration) (that has been through a rigorous open review process).
+Although not all APA journals offer the registered reports format, they may receive submissions that have been through the registered reports process at [PCI Registered Reports](https://rr.peercommunityin.org/), which will make all reviews and editorial communication publicly available. Such submissions can be treated like papers with a [preregistration](#preregistration) (that has been through a rigorous open review process).
 
 ## Resources
 
