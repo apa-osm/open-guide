@@ -39,7 +39,7 @@ repos <- tibble::tribble(
   mutate(service = glue::glue("<a href='{link}'>{name}</a>")) %>%
   select(service, doi, managed)
 
-DT::datatable(repos, escape = FALSE)
+DT::datatable(repos, escape = FALSE, rownames = FALSE)
 ```
 
 
