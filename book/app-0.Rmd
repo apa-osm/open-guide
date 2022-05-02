@@ -21,23 +21,28 @@ glossary_table(link = FALSE)
 
 # Repositories
 
-(list under construction)
+See the [Registry of Research Data Repositories(https://www.re3data.org/) for detailed listings of data repositories by subject.
+
+This list is under construction and will summarise important attributes of the data repositories that are most relevant to APA journals. These attributes will include maximum file/project size, limitations, and costs.
 
 ```{r, echo = FALSE}
 library(dplyr)
 
 repos <- tibble::tribble(
-  ~name, ~link, ~doi, ~managed,
-  "UK Data Service", "https://ukdataservice.ac.uk", F, T,
-  "Open Science Framework (OSF)", "https://osf.io", T, F,
-  "Harvard Dataverse", "https://dataverse.harvard.edu/", T, NA,
-  "Databrary", "https://nyu.databrary.org/", T, T,
-  "Figshare", "https://figshare.com/", T, F,
-  "zenodo", "https://zenodo.org/", T, F,
-  "GitHub", "https://github.com", F, F
+  ~name, ~link, ~doi, ~managed, ~versions, ~notes,
+  "UK Data Service", "https://ukdataservice.ac.uk", F, T, NA, "",
+  "Open Science Framework (OSF)", "https://osf.io", T, F, T, "",
+  "Harvard Dataverse", "https://dataverse.harvard.edu/", T, T, NA, "",
+  "Databrary", "https://nyu.databrary.org/", T, T, NA, "storing, streaming, and sharing video and audio recordings",
+  "Figshare", "https://figshare.com/", T, F, T, "",
+  "Zenodo", "https://zenodo.org/", T, F, T, "Links to GitHub for archiving code snapshots",
+  "GitHub", "https://github.com", F, F, T, "Primarily for code",
+  "Inter-university Consortium for Political and Social Research (ICPSR)", "https://www.icpsr.umich.edu/", T, T, T, "",
+  "LDbase", "https://ldbase.org/", F, T, NA,  "NIH-funded, educational and developmental sciences ",
+  "Research Data Center(RDC) at ZPID", "https://rdc-psychology.org/", NA, T, NA, "paid curation service"
 ) %>%
   mutate(service = glue::glue("<a href='{link}'>{name}</a>")) %>%
-  select(service, doi, managed)
+  select(service, doi, managed, versions, notes)
 
 DT::datatable(repos, escape = FALSE, rownames = FALSE)
 ```

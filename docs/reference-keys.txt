@@ -32,6 +32,7 @@ save-it-in-an-accessible-format
 include-a-codebook
 ethical-sharing
 make-it-findable
+resources-5
 open-code-1
 author-code-tips
 make-it-reproducible
@@ -40,7 +41,7 @@ indicate-software-versions
 confirm-reproducibility
 authorship-1
 roles-1
-resources-5
+resources-6
 preprints-1
 transparency-and-openness-statements-2
 registered-reports-2

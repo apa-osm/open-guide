@@ -44,6 +44,10 @@ Excel is less preferable because of the proprietary format and its tendency to m
 * Make the data accessible to the public before publication.
 * Make sure the paper contains the correct links to the data before publication.
 
+## Resources
+
+* [Guide to Social Science Data Preparation and Archiving](https://www.icpsr.umich.edu/web/pages/deposit/guide/index.html)
+
 # Open Code
 
 ## Tips {#author-code-tips}
