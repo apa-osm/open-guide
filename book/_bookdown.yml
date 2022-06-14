@@ -1,4 +1,4 @@
-book_filename: "APA_TOP"
+book_filename: "open-guide"
 new_session: no
 output_dir: ../docs
 before_chapter_script:

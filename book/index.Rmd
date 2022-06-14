@@ -9,9 +9,9 @@ csl: include/apa.csl
 classoption: oneside
 geometry: margin=1in
 link-citations: yes
-description: "APA TOP info"
-url: https://debruine.github.io/APA_TOP/
-github-repo: debruine/APA_TOP
+description: "Information about TOP guidelines at APA journals."
+url: https://apa-osm.github.io/open-guide/
+github-repo: apa-osm/open-guide
 cover-image: images/logos/logo.png
 apple-touch-icon: images/logos/apple-touch-icon.png
 apple-touch-icon-size: 180

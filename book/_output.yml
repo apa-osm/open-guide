@@ -3,7 +3,7 @@ bookdown::bs4_book:
   md_extensions: -smart
   df_print: kable
   repo:
-    base: https://github.com/debruine/APA_TOP
+    base: https://github.com/apa-osm/open-guide
     branch: master
     subdir: book
   includes:
