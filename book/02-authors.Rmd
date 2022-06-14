@@ -27,7 +27,7 @@ Excel is less preferable because of the proprietary format and its tendency to m
 * <span class="intermediate">Intermediate</span>: Use the R [codebook](https://rubenarslan.github.io/codebook/articles/codebook_tutorial.html){target="_blank"} to include a report with detailed metadata [@horstmann2020generating]
 
 
-### Ethical Sharing
+### Ethical sharing
 
 * Check that you are not sharing any identifiable data (without clear consent), such as names, student ID numbers, postcodes, IP addresses, or uniquely identifying combinations of demographic variables.
 * Add a [license](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} so others know how they can use the data. The most common licenses for data are:

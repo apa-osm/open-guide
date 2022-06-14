@@ -43,7 +43,7 @@ Although not all APA journals offer the registered reports format, they may rece
 
 # Preregistration
 
-Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study design plans, analysis plans, and/or theoretical predictions, depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix\ \@ref(registries)). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
+Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study hypotheses, design, analysis, along with all related materials prepared in advance of the study (protocols, measures, code), depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix\ \@ref(registries)). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
 
 When editing or reviewing a study that has been preregistered, here are a few things to consider. First, make sure that the study provides a link to the registry where it was preregistered. Self-hosted documents are not recommended. Second, the preregistration should be time-stamped and read-only. Finally, if resources permit, compare the study as reported in the final paper to the preregistered plan. If deviations from the plan have happened (which is typical), make sure that the deviations are transparently reported in the final paper so that readers can evaluate the consequences of the changes. Check to see if all planned analyses are reported in the paper, regardless of statistical significance of the outcome. 
 
@@ -63,7 +63,7 @@ When editing or reviewing a study that has been preregistered, here are a few th
 
 ## Resources
 
-* A template for preregistration of quantitative research in psychology: Report of the joint psychological societies preregistration task force [@bosnjak2021template]
+* A template for preregistration of quantitative research in psychology: Report of the Joint Psychological Societies Preregistration Task Force [@bosnjak2021template]
 * Preregistration of secondary data analysis: A template and tutorial [@van2021preregistration]
 * Recommendations for increasing the transparency of analysis of preexisting data sets [@weston2019recommendations]
 * OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/){target="_blank"}
@@ -100,7 +100,7 @@ Refer authors to Section\ \@ref(author-data-tips) for tips and resources to make
 
 ## Data sharing issues
 
-While it is ideal to shared the raw data exactly as collected, and include instructions or code needed to clean and process it to the analysed data, this may not be possible due to privacy or ethical issues. However, there are solutions that allow for partial sharing.
+While it is ideal to shared the raw data exactly as collected, and include instructions or code needed to clean and process it to the analysed data, this may not be possible due to privacy or ethical issues. However, there are solutions that allow for partial sharing. For example, if it is impossible to share individual-level or trial-level data, authors could provide item-level and scale-level descriptives, variance/covariances, both for the full data set and stratified by subgroups.
 
 ### Data are not anonymizable
 
@@ -122,15 +122,15 @@ If all or a subset of the original data are secondary and do not have a license 
 * Does the TOP statement have the correct link to a publicly accessible version of the data? (or a statement that data is not available or N/A)
 * Does the dataset contain the data required to produce all tables, plots, and analyses in the manuscript?
     * If no, is any omission noted and explained?
-    * If raw data are shared, is there code/instructions for processing it?
-* Is the data saved in an accessible format? (CSV > Excel > SPSS)
+    * If raw data are shared, is there code or instructions for processing it?
+* Is the dataset saved in an accessible format? (An order of preference for accessibility is CSV > Excel > SPSS)
 * Are the variables clearly explained?
     * Is there a codebook?
     * Are level values understandable?
     * Are units clear?
-* Is data being shared ethically? Is there any personally identifiable data?
-* Is the data clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
-* Is the data hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+* Is the dataset being shared ethically? Is there any personally identifiable data?
+* Is the dataset clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
+* Is the dataset hosted on a persistent archive? (see Appendix\ \@ref(repositories))
 
 
 :::

@@ -7,7 +7,9 @@
 
 # Glossary
 
-```{r, echo = FALSE}
+This section will contain a glossary of relevant open science terminology. See also [A community-sourced glossary of open scholarship terms](https://doi.org/10.1038/s41562-021-01269-4){target="_blank"} [@parsons2022community].
+
+```{r, echo = FALSE, eval = FALSE}
 glossary_table(link = FALSE)
 ```
 

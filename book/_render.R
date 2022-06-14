@@ -8,3 +8,5 @@ R.utils::copyDirectory(
   to = "docs/images",
   overwrite = TRUE,
   recursive = TRUE)
+
+xfun::in_dir("book", bookdown::render_book("index.Rmd", "bookdown::pdf_book"))
