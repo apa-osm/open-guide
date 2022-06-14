@@ -1,6 +1,7 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
   oneside]{book}
@@ -38,7 +39,11 @@
 \hypersetup{
   pdftitle={APA Open Guide},
   pdfauthor={OSM},
-  hidelinks,
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
@@ -147,6 +152,7 @@
 \maketitle
 
 {
+\hypersetup{linkcolor=}
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
@@ -154,7 +160,7 @@
 \chapter*{Overview}\label{overview}}
 \addcontentsline{toc}{chapter}{Overview}
 
-This guide is for editors, reviewers, and authors of APA submissions, to help them understand APA initiatives for open and transparent research, such as the TOP guidelines. The guiding principle is improving scientific rigour and increasing the transparency and accessibility of research, so do adjust any of the guidance for specific topics or circumstances in the service of those goals.
+This guide is for editors, reviewers, and authors of APA submissions, to help them understand APA initiatives for open and transparent research, such as the TOP guidelines. The guiding principle is improving scientific rigour and increasing the transparency and accessibility of research; adjust any of the guidance for specific topics or circumstances in the service of those goals.
 
 \textbf{The guide is in draft form. We are starting with guidance for editors and will be adding guidance for reviewers and authors soon. We welcome feedback and suggestions for further guidance.}
 

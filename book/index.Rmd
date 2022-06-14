@@ -8,6 +8,7 @@ bibliography: [bib.bib]
 csl: include/apa.csl
 classoption: oneside
 geometry: margin=1in
+urlcolor: blue
 link-citations: yes
 description: "Information about TOP guidelines at APA journals."
 url: https://apa-osm.github.io/open-guide/
@@ -20,7 +21,7 @@ favicon: images/logos/favicon.ico
 
 # Overview {-}
 
-This guide is for editors, reviewers, and authors of APA submissions, to help them understand APA initiatives for open and transparent research, such as the TOP guidelines. The guiding principle is improving scientific rigour and increasing the transparency and accessibility of research, so do adjust any of the guidance for specific topics or circumstances in the service of those goals.
+This guide is for editors, reviewers, and authors of APA submissions, to help them understand APA initiatives for open and transparent research, such as the TOP guidelines. The guiding principle is improving scientific rigour and increasing the transparency and accessibility of research; adjust any of the guidance for specific topics or circumstances in the service of those goals.
 
 **The guide is in draft form. We are starting with guidance for editors and will be adding guidance for reviewers and authors soon. We welcome feedback and suggestions for further guidance.**
 
