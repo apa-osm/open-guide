@@ -2,7 +2,7 @@
 
 # Transparency and Openness Statements
 
-[What to Check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx) in TOP statements for journals with TOP Level 1 or Level 2
+[What to Check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx){target="_blank"} in TOP statements for journals with TOP Level 1 or Level 2
 
 # Registered Reports
 
@@ -13,6 +13,8 @@
 # Open Data
 
 # Open Code
+
+# Citation
 
 # Authorship
 

@@ -23,3 +23,8 @@ body {
 .checklist ul {
   list-style-type: none;
 }
+
+li.book-part {
+  font-size: larger;
+  font-weight: 900;
+}

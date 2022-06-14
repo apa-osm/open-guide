@@ -23,30 +23,30 @@ Excel is less preferable because of the proprietary format and its tendency to m
 
 * <span class="beginner">Beginner</span>: include a text file with each column name and an explanation 
 * <span class="intermediate">Intermediate</span>: You can include a data dictionary with further info like data type (string, numeric) or possible ranges/values [@buchanan2021getting]
-* <span class="intermediate">Intermediate</span>: Use `faux::codebook()` to make a [machine-readable codebook](https://debruine.github.io/faux/articles/codebook.html) in PsychDS format
-* <span class="intermediate">Intermediate</span>: Use the R [codebook](https://rubenarslan.github.io/codebook/articles/codebook_tutorial.html) to include a report with detailed metadata [@horstmann2020generating]
+* <span class="intermediate">Intermediate</span>: Use `faux::codebook()` to make a [machine-readable codebook](https://debruine.github.io/faux/articles/codebook.html){target="_blank"} in PsychDS format
+* <span class="intermediate">Intermediate</span>: Use the R [codebook](https://rubenarslan.github.io/codebook/articles/codebook_tutorial.html){target="_blank"} to include a report with detailed metadata [@horstmann2020generating]
 
 
 ### Ethical Sharing
 
 * Check that you are not sharing any identifiable data (without clear consent), such as names, student ID numbers, postcodes, IP addresses, or uniquely identifying combinations of demographic variables.
-* Add a [license](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons) so others know how they can use the data. The most common licenses for data are:
+* Add a [license](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} so others know how they can use the data. The most common licenses for data are:
     * CC-0: Waives all rights and releases work to public domain
     * CC-BY: By Attribution, which permits sharing and reuse of the material, for any purpose, as long as the original authors are credited
     * CC-BY-SA: By Attribution, with a Share-Alike clause which means that anyone sharing or modifying the original work must release it under the same license
-* [Practical tips for ethical data sharing](https://doi.org/10.1177/2515245917747656) (@meyer2018practical)
+* [Practical tips for ethical data sharing](https://doi.org/10.1177/2515245917747656){target="_blank"} (@meyer2018practical)
 
 ### Make it findable
 
-* Use a persistent archive to host your data, like the [OSF](https://osf.io), [figshare](https://figshare.com/), or [zenodo](https://zenodo.org/). These platforms are free and can give your data a DOI.
+* Use a persistent archive to host your data, like the [OSF](https://osf.io){target="_blank"}, [figshare](https://figshare.com/){target="_blank"}, or [zenodo](https://zenodo.org/){target="_blank"}. These platforms are free and can give your data a DOI.
 * Include the citation info in a README
-* Remember to make the data accessible for reviewers before submission. The OSF allows you to create a blinded [review-only link](https://help.osf.io/hc/en-us/articles/360019930333-Create-a-View-only-Link-for-a-Project).
+* Remember to make the data accessible for reviewers before submission. The OSF allows you to create a blinded [review-only link](https://help.osf.io/hc/en-us/articles/360019930333-Create-a-View-only-Link-for-a-Project){target="_blank"}.
 * Make the data accessible to the public before publication.
 * Make sure the paper contains the correct links to the data before publication.
 
 ## Resources
 
-* [Guide to Social Science Data Preparation and Archiving](https://www.icpsr.umich.edu/web/pages/deposit/guide/index.html)
+* [Guide to Social Science Data Preparation and Archiving](https://www.icpsr.umich.edu/web/pages/deposit/guide/index.html){target="_blank"}
 
 # Open Code
 
@@ -65,13 +65,13 @@ Excel is less preferable because of the proprietary format and its tendency to m
 * Indicate which parts of your code produce any figure, table, or value in your manuscript
     * <span class="beginner">Beginner</span>: include comments in your code like `# produces Figure 3.1`
     * <span class="intermediate">Intermediate</span>: Use code the generate the text of the results section so you only have one thing to copy and paste into the manuscript
-    * <span class="advanced">Advanced</span>: Use code to generate the entire manuscript (e.g., using the [papaja](http://frederikaust.com/papaja_man/) package)
+    * <span class="advanced">Advanced</span>: Use code to generate the entire manuscript (e.g., using the [papaja](http://frederikaust.com/papaja_man/){target="_blank"} package)
 
 ### Indicate software versions
 
 * <span class="beginner">Beginner</span>: Include a text file with the info, e.g., devtools::session_info() in R, or requirements.txt in python
-* <span class="intermediate">Intermediate</span>: Or use dependency management, like [renv](https://rstudio.github.io/renv/articles/renv.html) or [packrat](https://rstudio.github.io/packrat/) in R
-* <span class="advanced">Advanced</span>: Or use containers like [Binder](https://mybinder.org/), [Docker](https://www.docker.com/) or [CodeOcean](https://codeocean.com/) for full reproducibility
+* <span class="intermediate">Intermediate</span>: Or use dependency management, like [renv](https://rstudio.github.io/renv/articles/renv.html){target="_blank"} or [packrat](https://rstudio.github.io/packrat/){target="_blank"} in R
+* <span class="advanced">Advanced</span>: Or use containers like [Binder](https://mybinder.org/){target="_blank"}, [Docker](https://www.docker.com/){target="_blank"} or [CodeOcean](https://codeocean.com/){target="_blank"} for full reproducibility
   
 ### Confirm reproducibility
 
@@ -82,11 +82,14 @@ Excel is less preferable because of the proprietary format and its tendency to m
 
 NB: If your code takes a very long time to run, such as when you have extremely large datasets or are running simulations, you can include smaller test datasets or run a smaller number of replications and include code at the top of the script to toggle real and test data or low and high numbers of reps.
 
-Finally, [make your code findable](#make-it-findable) using the same tips from the [open data section](#open-data). [GitHub](https://github.com/) is a common place to share code, but doesn't create a DOI, so if you use github, consider archiving a snapshot of your repository on [zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
+Finally, [make your code findable](#make-it-findable){target="_blank"} using the same tips from the [open data section](#open-data){target="_blank"}. [GitHub](https://github.com/){target="_blank"} is a common place to share code, but doesn't create a DOI, so if you use github, consider archiving a snapshot of your repository on [zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content){target="_blank"}.
+
+# Citation
+
 
 # Authorship
 
-Specifying each author's roles allows for transparent attribution of credit, especially when papers have many authors. The Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/) or [web app](https://tenzing.club/) app can help you manage this.
+Specifying each author's roles allows for transparent attribution of credit, especially when papers have many authors. The Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/){target="_blank"} or [web app](https://tenzing.club/){target="_blank"} app can help you manage this.
 
 ## Roles
 
@@ -107,9 +110,9 @@ Specifying each author's roles allows for transparent attribution of credit, esp
 
 ## Resources
 
-* Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/) and [web app](https://tenzing.club/)
-* [Casrai CRediT](https://casrai.org/credit/)
-* Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c)
+* Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/){target="_blank"} and [web app](https://tenzing.club/){target="_blank"}
+* [Casrai CRediT](https://casrai.org/credit/){target="_blank"}
+* Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c){target="_blank"}
 
 
 # Preprints

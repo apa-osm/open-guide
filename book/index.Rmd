@@ -26,6 +26,18 @@ This guide is for editors, reviewers, and authors of APA submissions, to help th
 
 ## TOP Guidelines
 
-* [APA Transparency and Openness Promotion](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion)
-* [COS TOP Guidelines](https://www.cos.io/initiatives/top-guidelines)
-* [OSF TOP Resources](https://osf.io/9f6gx/)
+* [APA Transparency and Openness Promotion](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion){target="_blank"}
+* [COS TOP Guidelines](https://www.cos.io/initiatives/top-guidelines){target="_blank"}
+* [OSF TOP Resources](https://osf.io/9f6gx/){target="_blank"}
+
+## Getting Started with Open Science
+
+* [An open science workflow for more credible, rigorous research](https://psyarxiv.com/wu6sn){target="_blank"} [@corker2021open]
+
+* [Seven easy steps to open science](https://doi.org/10.1027/2151-2604/a000387){target="_blank"} [@cruwell2019seven]
+
+* [Easing into open science: A guide for graduate students and their advisors](https://doi.org/10.1525/collabra.18684){target="_blank"} [@kathawalla2021easing]
+
+* [A community-sourced glossary of open scholarship terms](https://doi.org/10.1038/s41562-021-01269-4){target="_blank"} [@parsons2022community]
+
+* Spellman, B. A., Gilbert, E. A., & Corker, K. S. (2018). Open science. In E. J. Wagenmakers (Volume Ed.) & J. T. Wixted (Series Ed.) Stevens’ Handbook of Experimental Psychology and Cognitive Neuroscience Volume 5: Methodology (4th ed.). Preprint at <https://osf.io/gv6r4/>{target="_blank"}

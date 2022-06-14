@@ -10,35 +10,35 @@ We report how we determined our sample size, all data exclusions, all manipulati
     
 ## Resources
 
-* [What to check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx) in transparency and openness statements for journals with TOP Level 1 or Level 2
-* [Introduction to TOP at APA for editors](https://www.dropbox.com/s/rx616egpte53o9m/TOP_at_APA_withScript.pdf)
-* [APA TOP](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion)
-* [OSF TOP](https://osf.io/9f6gx/)
-* [COS TOP](https://www.cos.io/initiatives/top-guidelines)
-* [TOP Mixed Level Journals](https://docs.google.com/document/d/10cMB2IT406gPAgCAORa5_UVI6Plrwvl4XjTsd0Ya_4s/edit)
-* [APA Journal Reporting Standards](https://apastyle.apa.org/jars)
+* [What to check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx){target="_blank"} in transparency and openness statements for journals with TOP Level 1 or Level 2
+* [Introduction to TOP at APA for editors](https://www.dropbox.com/s/rx616egpte53o9m/TOP_at_APA_withScript.pdf){target="_blank"}
+* [APA TOP](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion){target="_blank"}
+* [OSF TOP](https://osf.io/9f6gx/){target="_blank"}
+* [COS TOP](https://www.cos.io/initiatives/top-guidelines){target="_blank"}
+* [TOP Mixed Level Journals](https://docs.google.com/document/d/10cMB2IT406gPAgCAORa5_UVI6Plrwvl4XjTsd0Ya_4s/edit){target="_blank"}
+* [APA Journal Reporting Standards](https://apastyle.apa.org/jars){target="_blank"}
 
 
 
 # Registered Reports
 
-From [Center for Open Science](https://www.cos.io/initiatives/registered-reports):
+From [Center for Open Science](https://www.cos.io/initiatives/registered-reports){target="_blank"}:
 
 > Registered Reports is a publishing format that emphasizes the importance of the research question and the quality of methodology by conducting peer review prior to data collection. High quality protocols are then provisionally accepted for publication if the authors follow through with the registered methodology.
 
 > This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings.
 
-Although not all APA journals offer the registered reports format, they may receive submissions that have been through the registered reports process at [PCI Registered Reports](https://rr.peercommunityin.org/), which will make all reviews and editorial communication publicly available. Such submissions can be treated like papers with a [preregistration](#preregistration) (that has been through a rigorous open review process).
+Although not all APA journals offer the registered reports format, they may receive submissions that have been through the registered reports process at [PCI Registered Reports](https://rr.peercommunityin.org/){target="_blank"}, which will make all reviews and editorial communication publicly available. Such submissions can be treated like papers with a [preregistration](#preregistration){target="_blank"} (that has additionally been through a rigorous open review process).
 
 ## Resources
 
-* [OSF RR protocol registration](https://osf.io/rr/)
-* [PCI Registered Reports](https://rr.peercommunityin.org/)
-* [Center for Open Science RR Resources](https://www.cos.io/initiatives/registered-reports):
-    * [Fact sheet for editors](https://osf.io/jbeus/)
-    * [Template guide to authors and reviewers](https://osf.io/pukzy/)
-    * [Templates of reviewer invitation letters and author decision letters](https://osf.io/5adi7/)
-    * [Implementation checklist](https://osf.io/2m4ct/)
+* [OSF RR protocol registration](https://osf.io/rr/){target="_blank"}
+* [PCI Registered Reports](https://rr.peercommunityin.org/){target="_blank"}
+* [Center for Open Science RR Resources](https://www.cos.io/initiatives/registered-reports){target="_blank"}:
+    * [Fact sheet for editors](https://osf.io/jbeus/){target="_blank"}
+    * [Template guide to authors and reviewers](https://osf.io/pukzy/){target="_blank"}
+    * [Templates of reviewer invitation letters and author decision letters](https://osf.io/5adi7/){target="_blank"}
+    * [Implementation checklist](https://osf.io/2m4ct/){target="_blank"}
 
 
 # Preregistration
@@ -57,6 +57,7 @@ When editing or reviewing a study that has been preregistered, here are a few th
 * Is the preregistration time-stamped?
 * Are all deviations from the plan transparently reported?
 * Are all planned analyses are reported in the paper, regardless of statistical significance of the outcome?
+* Are all unplanned analyses transparently marked as exploratory?
 
 :::
 
@@ -65,7 +66,7 @@ When editing or reviewing a study that has been preregistered, here are a few th
 * A template for preregistration of quantitative research in psychology: Report of the joint psychological societies preregistration task force [@bosnjak2021template]
 * Preregistration of secondary data analysis: A template and tutorial [@van2021preregistration]
 * Recommendations for increasing the transparency of analysis of preexisting data sets [@weston2019recommendations]
-* OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/)
+* OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/){target="_blank"}
 
 
 # Open Materials
@@ -74,7 +75,15 @@ Provide research materials and description of procedures necessary to conduct an
 
 If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
 
-See Appendix\ \@ref(repositories) for a list of repositories.
+## Checklist
+
+::: {.checklist}
+
+* Does the TOP statement have the correct link to a publicly accessible version of the materials? (or a statement that data is not available or N/A)
+* Are the materials clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
+* Are the materials hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+
+:::
 
 
 # Open Data
@@ -83,13 +92,19 @@ Open data should include all variables, treatment conditions, and observations d
 
 Refer authors to Section\ \@ref(author-data-tips) for tips and resources to make data open.
 
+## Resources
+
+* Data Management and Data Sharing in Psychological Science: Revision of the DGPs Recommendations [@gollwitzer_2020]
+* Is It Time to Share Qualitative Research Data? [@dubois2018time]
+* [APA Statement on data sharing](https://www.apa.org/pubs/journals/resources/data-sharing){target="_blank"}
+
 ## Data sharing issues
 
 While it is ideal to shared the raw data exactly as collected, and include instructions or code needed to clean and process it to the analysed data, this may not be possible due to privacy or ethical issues. However, there are solutions that allow for partial sharing.
 
 ### Data are not anonymizable
 
-Data may be in a format, such as videos of interviews, where it is not possible to make them anonymous. Consider recommending that they be archived at a managed-access data archiving service, such as the [UK Data Service](https://ukdataservice.ac.uk/deposit-data/) or [Databrary](https://databrary.org/about/agreement.html). See Appendix\ \@ref(repositories) for a list of data repositories.
+Data may be in a format, such as videos of interviews, where it is not possible to make them anonymous. Consider recommending that they be archived at a managed-access data archiving service, such as the [UK Data Service](https://ukdataservice.ac.uk/deposit-data/){target="_blank"} or [Databrary](https://databrary.org/about/agreement.html){target="_blank"}. See Appendix\ \@ref(repositories) for a list of data repositories.
 
 ### Anonymity could be compromised by data triangulation 
 
@@ -114,7 +129,7 @@ If all or a subset of the original data are secondary and do not have a license 
     * Are level values understandable?
     * Are units clear?
 * Is data being shared ethically? Is there any personally identifiable data?
-* Is the data clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons) for reuse? (e.g., CC-BY)
+* Is the data clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
 * Is the data hosted on a persistent archive? (see Appendix\ \@ref(repositories))
 
 
@@ -126,24 +141,45 @@ Authors should provide program code, scripts, codebooks, and other documentation
 
 Refer authors to Section\ \@ref(author-code-tips) for tips and resources to make code open.
 
-If not all data needed to run the code can be shared, encourage authors to include simulated or redacted data so that the code can be tested by others. R packages such as [synthpop](https://www.synthpop.org.uk/), [faux](https://debruine.github.io/faux/), and [simstudy](https://kgoldfeld.github.io/simstudy/) can facilitate this. Faux also has a [web-based interface](https://shiny.psy.gla.ac.uk/debruine/fauxapp/) for simulating data from factorial designs (and soon for multilevel designs).
+If not all data needed to run the code can be shared, encourage authors to include simulated or redacted data so that the code can be tested by others. R packages such as [synthpop](https://www.synthpop.org.uk/){target="_blank"}, [faux](https://debruine.github.io/faux/){target="_blank"}, and [simstudy](https://kgoldfeld.github.io/simstudy/){target="_blank"} can facilitate this. Faux also has a [web-based interface](https://shiny.psy.gla.ac.uk/debruine/fauxapp/){target="_blank"} for simulating data from factorial designs (and soon for multilevel designs).
 
 ## Checklist
 
 ::: {.checklist}
 
 * Does the TOP statement have the correct link to a publicly accessible version of the code? (or a statement that code is not available or N/A)
-* Is there evidence (e.g., author statement, [CodeCheck](https://codecheck.org.uk/) confirmation, or editorial check) that the code contains all components needed to run?
-* Is the code clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons) for reuse? (e.g., CC-BY)
+* Is there evidence (e.g., author statement, [CodeCheck](https://codecheck.org.uk/){target="_blank"} confirmation, or editorial check) that the code contains all components needed to run?
+* Is the code clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
 * Is the code hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+
+:::
+
+# Citation
+
+Papers using secondary (i.e., from other sources) data, materials, or analysis code must cite those artifacts in the TOP statement. All citations should be to persistent/stable identifiers (DOIs) whenever possible. If creators of data, materials, or code have provided a preferred citation, that source should be cited, along with a way for readers to access the shared material (e.g., on a website or in a repository). 
+
+Note, secondary analysis code includes software packages (e.g., R packages), as well as custom analysis code (e.g., code that the paper authors did not write, but someone else prepared for a specific use). The majority of papers will have some secondary code to cite, and it is often overlooked or forgotten. Encourage authors to include version numbers with any software packages. If the amount of information is extensive, a supplementary table can be included with the relevant version and citation information. 
+
+Sometimes, authors will provide citations in other parts of the Method or Results sections (e.g., Analysis Plan for secondary code or Materials for secondary materials), but for completeness, such information should be encouraged to be relocated to the TOP statement. 
+
+Citations in the TOP statement should be, where possible, to the source of the material, data, software or code, rather than to papers that only describe the material, but do not provide access to it. Such descriptive citations can be included in the main text of the paper.
+
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TOP statement include citations for any secondary material?
+* Does the TOP statement include citations for any secondary data?
+* Does the TOP statement include citations for any software or code, including version numbers where relevant?
 
 :::
 
 # Authorship
 
-Per the APA [Equity, Diversity, and Inclusion Toolkit for Journal Editors](https://www.apa.org/pubs/authors/equity-diversity-inclusion-toolkit), 
+Per the APA [Equity, Diversity, and Inclusion Toolkit for Journal Editors](https://www.apa.org/pubs/authors/equity-diversity-inclusion-toolkit){target="_blank"}, 
 
-> Developed by the Consortia Advancing Standards in Research Administration (CASRAI) and National Information Standards Organization (NISO), CRediT is a high-level taxonomy comprised of 14 contributor roles, each of which can be modified by a degree of contribution (lead, equal, or supporting). The full taxonomy with definitions for each role can be found on the [NISO website](https://casrai.org/credit/). Author contribution statements promote equity and inclusion by specifically attributing contributions to each author. Author contribution statements likewise allow for the inclusion of collaborators whose contributions are less obviously represented in the written article, such as colleagues who may have provided input in early stages of an article or who handled more logistical aspects of the research. CRediT is likewise a useful tool for measuring potential inequities in the division of scientific labor by gender or other demographics. For instance, @lariviere2021investigating offer an analysis on the gender division of labor using CRediT data from PLOS journals.
+> Developed by the Consortia Advancing Standards in Research Administration (CASRAI) and National Information Standards Organization (NISO), CRediT is a high-level taxonomy comprised of 14 contributor roles, each of which can be modified by a degree of contribution (lead, equal, or supporting). The full taxonomy with definitions for each role can be found on the [NISO website](https://casrai.org/credit/){target="_blank"}. Author contribution statements promote equity and inclusion by specifically attributing contributions to each author. Author contribution statements likewise allow for the inclusion of collaborators whose contributions are less obviously represented in the written article, such as colleagues who may have provided input in early stages of an article or who handled more logistical aspects of the research. CRediT is likewise a useful tool for measuring potential inequities in the division of scientific labor by gender or other demographics. For instance, @lariviere2021investigating offer an analysis on the gender division of labor using CRediT data from PLOS journals.
 
 ## Roles
 
@@ -173,9 +209,9 @@ Per the APA [Equity, Diversity, and Inclusion Toolkit for Journal Editors](https
 
 ## Resources
 
-* [Casrai CRediT](https://casrai.org/credit/)
+* [Casrai CRediT](https://casrai.org/credit/){target="_blank"}
 * Contributorship, not authorship: Use CRediT to indicate who did what [@holcombe2019contributorship]
-* Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c)
+* Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c){target="_blank"}
 
 # Preprints
 
@@ -183,9 +219,10 @@ Preprints are author copies of manuscripts prior to acceptance by a journal. Pos
 
 ## Resources
 
-* [FAQs about preprints](http://blog.psyarxiv.com/2016/09/19/psyarxiv-faq/)
+* [FAQs about preprints](http://blog.psyarxiv.com/2016/09/19/psyarxiv-faq/){target="_blank"}
 * A guide to posting and managing preprints [@moshontz2021guide]
-* [PsyArXiv](https://psyarxiv.com/)
-* [PLoS Preprints](https://plos.org/open-science/preprints/)
+* [PsyArXiv](https://psyarxiv.com/){target="_blank"}
+* [PLoS Preprints](https://plos.org/open-science/preprints/){target="_blank"}
 * In praise of preprints [@fry2019praise]
+* Not one but many models of open-access publishing [@condon2020not]
 
