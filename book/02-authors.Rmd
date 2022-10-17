@@ -2,15 +2,58 @@
 
 # Transparency and Openness Statements {#authors-top}
 
+To enable readers to quickly and easily find open science disclosures, APA is requiring that authors include a subsection in their paper's Method section titled "Transparency and Openness". In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2. 
+
+## Example TOP Statement
+
+We report how we determined our sample size, all data exclusions, all manipulations, and all measures in the study, and we follow JARS [@kazak2018journal]. All data, analysis code, and research materials are available at [stable link to repository]. Data were analyzed using R, version 4.0.0 [@R] and the package lme4, version 1.1-27.1 [@lme4]. This study's design and its analysis were not pre-registered.
+    
+## Resources
+
+* [APA TOP](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion){target="_blank"}
+* [OSF TOP](https://osf.io/9f6gx/){target="_blank"}
+* [COS TOP](https://www.cos.io/initiatives/top-guidelines){target="_blank"}
+* [APA Journal Reporting Standards](https://apastyle.apa.org/jars){target="_blank"}
+
+
 # Registered Reports {#authors-registered-reports}
 
+From [Center for Open Science](https://www.cos.io/initiatives/registered-reports){target="_blank"}:
+
+> Registered Reports is a publishing format that emphasizes the importance of the research question and the quality of methodology by conducting peer review prior to data collection. High quality protocols are then provisionally accepted for publication if the authors follow through with the registered methodology.
+
+> This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings.
+
+Benefits of the Registered Reports process from the perspective of authors include: receiving in-principle acceptance prior to investing scarce resources in running a study, getting peer input on study design prior to study onset when it is likely to be usefully incorporated, a chance to avoid resubmission of a paper at many journals prior to acceptance, and assurance that null results will receive equal treatment to positive results during consideration of a paper.
+
+Authors have two options for Registered Reports. They may submit directly to a journal that offers the Registered Report submission type, or they may submit to the Peer Community In Registered Reports (PCI-RR). The PCI-RR is a journal independent peer reviewing service that manages the complete (stage 1 and stage 2) review of Registered Reports. After recommendation (i.e., acceptance) through the PCI-RR, authors are able to submit their work directly to participating journals. These journals either agree to accept relevant work outright (friendly journals) or after additional peer review (interested journals). 
+
+## Resources
+
+* [OSF RR protocol registration](https://osf.io/rr/){target="_blank"}
+* [PCI Registered Reports](https://rr.peercommunityin.org/){target="_blank"}
+* [Center for Open Science RR Resources](https://www.cos.io/initiatives/registered-reports){target="_blank"}
+
 # Preregistration {#authors-prereg}
+
+Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study hypotheses, design, analysis, along with all related materials prepared in advance of the study (protocols, measures, code), depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix\ \@ref(registries)). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
+
+When preparing your preregistration for inclusion in your manuscript, here are a few things to consider. First, make sure that the paper provides a link to the registry where it was preregistered. Self-hosted documents are not recommended. Second, the preregistration should be time-stamped and read-only. Finally, compare the study as reported in the final paper to the preregistered plan. If deviations from the plan have happened (which is typical), make sure that the deviations are transparently reported in the final paper so that readers can evaluate the consequences of the changes. Check to see if all planned analyses are reported in the paper, regardless of statistical significance of the outcome. Make sure that any additional exploratory analyses are transparently marked as such. It might be best to include those analyses in their own well-marked section following any confirmatory analyses. 
+
+## Resources
+
+* A template for preregistration of quantitative research in psychology: Report of the Joint Psychological Societies Preregistration Task Force [@bosnjak2021template]
+* Preregistration of secondary data analysis: A template and tutorial [@van2021preregistration]
+* Recommendations for increasing the transparency of analysis of preexisting data sets [@weston2019recommendations]
+* OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/){target="_blank"}
 
 # Open Materials {#authors-open-materials}
 
 Provide research materials and description of procedures necessary to conduct an independent replication of the research.
 
 If research materials are secondary, they should be cited rather than shared directly (see Section\ \@ref(authors-citation)). Include any information on how others can also obtain the materials.
+
+If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
 
 ## Tips {#authors-materials-tips}
 
@@ -106,10 +149,19 @@ NB: If your code takes a very long time to run, such as when you have extremely 
 
 # Citation {#authors-citation}
 
+Papers using secondary (i.e., from other sources) data, materials, or analysis code must cite those artifacts in the TOP statement. All citations should be to persistent/stable identifiers (DOIs) whenever possible. If creators of data, materials, or code have provided a preferred citation, that source should be cited, along with a way for readers to access the shared material (e.g., on a website or in a repository).
+
+Note, secondary analysis code includes software packages (e.g., R packages), as well as custom analysis code (e.g., code that you, as authors, did not write, but that someone else prepared for a specific use). The majority of papers will have some research software to cite, and it is often overlooked or forgotten. Remember to include version numbers with any software packages. If the amount of information is extensive, a supplementary table can be included with the relevant version and citation information.
+
+You might be tempted to provide citations in other parts of the Method or Results sections (e.g., Analysis Plan for secondary code or Materials for secondary materials), but for completeness, such information should be relocated to the TOP statement. Citations in the TOP statement should be, where possible, to the source of the material, data, software or code, rather than to papers that only describe the material, but do not provide access to it. Such descriptive citations can be included in the main text of the paper, if desired.
+When data, materials, or code are primary (i.e., created by your author team and published alongside your article), remember to openly license those artifacts and see the Open Data, Open Materials, and Open Code sections for more guidance. When data, materials, or code are secondary, make sure to cite those artifacts as described here, and avoid sharing copies those artifacts in full to avoid issues with copyright (unless they are permissively licensed to allow such sharing). 
+
 
 # Authorship {#authors-authorship}
 
 Specifying each author's roles allows for transparent attribution of credit, especially when papers have many authors. The Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/){target="_blank"} or [web app](https://tenzing.club/){target="_blank"} app can help you manage this.
+
+You may include a statement of author contributions whether or not the journal requires CRediT statements. Simply include the statement of contributions in the Author Note unless other directions are provided in a journal’s submission guidelines. See the resources section below for tips on preparing CRediT statements. 
 
 ## Roles
 
@@ -136,3 +188,7 @@ Specifying each author's roles allows for transparent attribution of credit, esp
 
 
 # Preprints {#authors-preprints}
+
+Preprints are author copies of manuscripts prior to acceptance by a journal (preprints are also called "submitted" manuscripts). Postprints are author copies of manuscripts after acceptance for publication by a journal (postprints are also called "accepted" manuscripts). Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication. As of August 2022, all APA core titles allow posting of preprints and postprints without embargo.
+
+Most journals in psychology allow the submission of preprints (submitted manuscripts) to disciplinary repositories like PsyArXiv without embargo or restriction, and a growing number also allow submission of postprints (accepted manuscripts) without any embargo. By contrast, the journal-typeset version of an article is often referred to as the “published version,” and this version is usually subject to more restrictions on sharing. Authors can check [Sherpa Romeo](https://v2.sherpa.ac.uk/romeo/) to verify the policies of the journal to which they are submitting or have been accepted. 
