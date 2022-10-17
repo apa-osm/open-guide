@@ -1,16 +1,30 @@
 # (PART) Authors {-}
 
-# Transparency and Openness Statements
+# Transparency and Openness Statements {#authors-top}
 
-# Registered Reports
+# Registered Reports {#authors-registered-reports}
 
-# Preregistration
+# Preregistration {#authors-prereg}
 
-# Open Materials
+# Open Materials {#authors-open-materials}
 
-# Open Data
+Provide research materials and description of procedures necessary to conduct an independent replication of the research.
 
-## Tips {#author-data-tips}
+If research materials are secondary, they should be cited rather than shared directly (see Section\ \@ref(authors-citation)). Include any information on how others can also obtain the materials.
+
+## Tips {#authors-materials-tips}
+
+### Add a license
+
+If you share your materials, including any figures in the manuscript, using an open license such as CC-BY, this makes reuse straightforward. See Appendix\ \@ref(licenses) for more details.
+
+# Open Data {#authors-open-data}
+
+Open data should include all variables, treatment conditions, and observations described in the manuscript, and provide a full account of the procedures used to collect, preprocess, clean, or generate the data. This data should allow for the reproduction of any plots, tables, or analyses reported in the manuscript.
+
+If data are secondary, they should be cited rather than shared directly (see Section\ \@ref(authors-citation)). Include any information on how others can also obtain the data.
+
+## Tips {#authors-data-tips}
 
 ### Save it in an accessible format
 
@@ -30,7 +44,7 @@ Excel is less preferable because of the proprietary format and its tendency to m
 ### Ethical sharing
 
 * Check that you are not sharing any identifiable data (without clear consent), such as names, student ID numbers, postcodes, IP addresses, or uniquely identifying combinations of demographic variables.
-* Add a [license](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} so others know how they can use the data. The most common licenses for data are:
+* Add a license so others know how they can use the data. See Appendix\ \@ref(licenses) for more details. The most common licenses for data are:
     * CC-0: Waives all rights and releases work to public domain
     * CC-BY: By Attribution, which permits sharing and reuse of the material, for any purpose, as long as the original authors are credited
     * CC-BY-SA: By Attribution, with a Share-Alike clause which means that anyone sharing or modifying the original work must release it under the same license
@@ -48,9 +62,11 @@ Excel is less preferable because of the proprietary format and its tendency to m
 
 * [Guide to Social Science Data Preparation and Archiving](https://www.icpsr.umich.edu/web/pages/deposit/guide/index.html){target="_blank"}
 
-# Open Code
+# Open Code {#authors-open-code}
 
-## Tips {#author-code-tips}
+If research code is entirely secondary, it should be cited rather than shared directly (see Section\ \@ref(authors-citation)). However, this is likely to be rare, and research code that is modified in any way from the original should be both cited and shared. 
+
+## Tips {#authors-code-tips}
 
 ### Make it reproducible
 
@@ -82,12 +98,16 @@ Excel is less preferable because of the proprietary format and its tendency to m
 
 NB: If your code takes a very long time to run, such as when you have extremely large datasets or are running simulations, you can include smaller test datasets or run a smaller number of replications and include code at the top of the script to toggle real and test data or low and high numbers of reps.
 
-Finally, [make your code findable](#make-it-findable){target="_blank"} using the same tips from the [open data section](#open-data){target="_blank"}. [GitHub](https://github.com/){target="_blank"} is a common place to share code, but doesn't create a DOI, so if you use github, consider archiving a snapshot of your repository on [zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content){target="_blank"}.
+### Share and license
 
-# Citation
+* Add a license so others know how they can use and modify the code. See Appendix\ \@ref(licenses) for more details.
+* Make your code findable using the same tips from Section\ \@ref(make-it-findable) 
+* [GitHub](https://github.com/){target="_blank"} is a common place to share code, but doesn't create a DOI, so if you use github, consider archiving a snapshot of your repository on [zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content){target="_blank"}.
+
+# Citation {#authors-citation}
 
 
-# Authorship
+# Authorship {#authors-authorship}
 
 Specifying each author's roles allows for transparent attribution of credit, especially when papers have many authors. The Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/){target="_blank"} or [web app](https://tenzing.club/){target="_blank"} app can help you manage this.
 
@@ -115,4 +135,4 @@ Specifying each author's roles allows for transparent attribution of credit, esp
 * Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c){target="_blank"}
 
 
-# Preprints
+# Preprints {#authors-preprints}

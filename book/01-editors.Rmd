@@ -1,6 +1,6 @@
 # (PART) Editors {-}
 
-# Transparency and Openness Statements
+# Transparency and Openness Statements {#editors-top}
 
 To enable readers to quickly and easily find open science disclosures, APA is requiring that authors include a subsection in their paper's Method section titled "Transparency and Openness". In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2. 
 
@@ -20,7 +20,7 @@ We report how we determined our sample size, all data exclusions, all manipulati
 
 
 
-# Registered Reports
+# Registered Reports {#editors-registered-reports}
 
 From [Center for Open Science](https://www.cos.io/initiatives/registered-reports){target="_blank"}:
 
@@ -41,7 +41,7 @@ Although not all APA journals offer the registered reports format, they may rece
     * [Implementation checklist](https://osf.io/2m4ct/){target="_blank"}
 
 
-# Preregistration
+# Preregistration  {#editors-prereg}
 
 Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study hypotheses, design, analysis, along with all related materials prepared in advance of the study (protocols, measures, code), depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix\ \@ref(registries)). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
 
@@ -69,9 +69,11 @@ When editing or reviewing a study that has been preregistered, here are a few th
 * OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/){target="_blank"}
 
 
-# Open Materials
+# Open Materials {#editors-open-materials}
 
 Provide research materials and description of procedures necessary to conduct an independent replication of the research.
+
+If research materials are secondary, they should be cited rather than shared directly (see Section\ \@ref(editors-citation)). Include any information on how others can also obtain the materials.
 
 If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
 
@@ -80,17 +82,19 @@ If research materials are proprietary, include information on how to obtain them
 ::: {.checklist}
 
 * Does the TOP statement have the correct link to a publicly accessible version of the materials? (or a statement that data is not available or N/A)
-* Are the materials clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
+* Are the materials clearly licensed for reuse? (see Appendix\ \@ref(licenses))
 * Are the materials hosted on a persistent archive? (see Appendix\ \@ref(repositories))
 
 :::
 
 
-# Open Data
+# Open Data {#editors-open-data}
 
 Open data should include all variables, treatment conditions, and observations described in the manuscript, and provide a full account of the procedures used to collect, preprocess, clean, or generate the data. This data should allow for the reproduction of any plots, tables, or analyses reported in the manuscript.
 
-Refer authors to Section\ \@ref(author-data-tips) for tips and resources to make data open.
+If data are secondary, they should be cited rather than shared directly (see Section\ \@ref(citation)). Include any information on how others can also obtain the data.
+
+Refer authors to Section\ \@ref(authors-data-tips) for tips and resources to make data open.
 
 ## Resources
 
@@ -129,17 +133,19 @@ If all or a subset of the original data are secondary and do not have a license 
     * Are level values understandable?
     * Are units clear?
 * Is the dataset being shared ethically? Is there any personally identifiable data?
-* Is the dataset clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
+* Is the dataset clearly licensed for reuse? (see Appendix\ \@ref(licenses))
 * Is the dataset hosted on a persistent archive? (see Appendix\ \@ref(repositories))
 
 
 :::
 
-# Open Code
+# Open Code {#editors-open-code}
 
 Authors should provide program code, scripts, codebooks, and other documentation sufficient to precisely reproduce all published results.
 
-Refer authors to Section\ \@ref(author-code-tips) for tips and resources to make code open.
+If research code is entirely secondary, it should be cited rather than shared directly (see Section\ \@ref(editors-citation)). However, this is likely to be rare, and research code that is modified in any way from the original should be both cited and shared. 
+
+Refer authors to Section\ \@ref(authors-code-tips) for tips and resources to make code open.
 
 If not all data needed to run the code can be shared, encourage authors to include simulated or redacted data so that the code can be tested by others. R packages such as [synthpop](https://www.synthpop.org.uk/){target="_blank"}, [faux](https://debruine.github.io/faux/){target="_blank"}, and [simstudy](https://kgoldfeld.github.io/simstudy/){target="_blank"} can facilitate this. Faux also has a [web-based interface](https://shiny.psy.gla.ac.uk/debruine/fauxapp/){target="_blank"} for simulating data from factorial designs (and soon for multilevel designs).
 
@@ -149,12 +155,12 @@ If not all data needed to run the code can be shared, encourage authors to inclu
 
 * Does the TOP statement have the correct link to a publicly accessible version of the code? (or a statement that code is not available or N/A)
 * Is there evidence (e.g., author statement, [CodeCheck](https://codecheck.org.uk/){target="_blank"} confirmation, or editorial check) that the code contains all components needed to run?
-* Is the code clearly [licensed](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons){target="_blank"} for reuse? (e.g., CC-BY)
+* Is the code clearly licensed for reuse? (see Appendix\ \@ref(licenses))
 * Is the code hosted on a persistent archive? (see Appendix\ \@ref(repositories))
 
 :::
 
-# Citation
+# Citation {#editors-citation}
 
 Papers using secondary (i.e., from other sources) data, materials, or analysis code must cite those artifacts in the TOP statement. All citations should be to persistent/stable identifiers (DOIs) whenever possible. If creators of data, materials, or code have provided a preferred citation, that source should be cited, along with a way for readers to access the shared material (e.g., on a website or in a repository). 
 
@@ -173,7 +179,7 @@ Sometimes, authors will provide citations in other parts of the Method or Result
 
 :::
 
-# Authorship
+# Authorship {#editors-authorship}
 
 Per the APA [Equity, Diversity, and Inclusion Toolkit for Journal Editors](https://www.apa.org/pubs/authors/equity-diversity-inclusion-toolkit){target="_blank"}, 
 
@@ -211,7 +217,7 @@ Per the APA [Equity, Diversity, and Inclusion Toolkit for Journal Editors](https
 * Contributorship, not authorship: Use CRediT to indicate who did what [@holcombe2019contributorship]
 * Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c){target="_blank"}
 
-# Preprints
+# Preprints {#editors-preprints}
 
 Preprints are author copies of manuscripts prior to acceptance by a journal. Postprints are author copies of manuscripts after acceptance for publication by a journal. Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication.
 

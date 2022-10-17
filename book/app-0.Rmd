@@ -16,9 +16,17 @@ glossary_table(link = FALSE)
 
 # Licenses
 
+Shared code, data, and materials (including manuscript figures) should have an explicit license, such as CC-BY. This makes reuse straightforward. 
+
+Authors may wish to contact their research office to discuss appropriate licenses for their situation, as whether research outputs should be licensed to the authors or their place of employment can differ between countries. 
+
+While there is some ambiguity, many recommend against sharing research outputs using a CC-BY-NC licence, which prohibits commercial reuse, including in journal articles, or CC-BY-ND, which prohibits derivative use, such as meta-analyses or replications. 
+
 * [Choosing between licenses](http://blog.psyarxiv.com/2018/05/14/licensing-work-psyarxiv/)
 * [Creative Commons Licenses](https://creativecommons.org)
 * [Open-source licenses](https://opensource.org/licenses) for code
+* [CC BY: what does it mean for scholarly articles?](https://openaccess.ox.ac.uk/2013/06/13/cc-by-what-does-it-mean-for-scholarly-articles-3/)
+* [Licenses for data sharing](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons)
 
 
 # Repositories
