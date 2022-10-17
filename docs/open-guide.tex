@@ -34,18 +34,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={APA Open Guide},
-  pdfauthor={OSM},
-  colorlinks=true,
-  linkcolor={Maroon},
-  filecolor={Maroon},
-  citecolor={Blue},
-  urlcolor={blue},
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
@@ -143,10 +131,22 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={APA Open Guide},
+  pdfauthor={OSM},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
 
 \title{APA Open Guide}
 \author{OSM}
-\date{2022-06-14}
+\date{2022-10-17}
 
 \begin{document}
 \maketitle
@@ -196,8 +196,8 @@ This guide is for editors, reviewers, and authors of APA submissions, to help th
 \hypertarget{part-editors}{%
 \part{Editors}\label{part-editors}}
 
-\hypertarget{transparency-and-openness-statements}{%
-\chapter{Transparency and Openness Statements}\label{transparency-and-openness-statements}}
+\hypertarget{editors-top}{%
+\chapter{Transparency and Openness Statements}\label{editors-top}}
 
 To enable readers to quickly and easily find open science disclosures, APA is requiring that authors include a subsection in their paper's Method section titled ``Transparency and Openness''. In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2.
 
@@ -227,8 +227,8 @@ We report how we determined our sample size, all data exclusions, all manipulati
   \href{https://apastyle.apa.org/jars}{APA Journal Reporting Standards}
 \end{itemize}
 
-\hypertarget{registered-reports}{%
-\chapter{Registered Reports}\label{registered-reports}}
+\hypertarget{editors-registered-reports}{%
+\chapter{Registered Reports}\label{editors-registered-reports}}
 
 From \href{https://www.cos.io/initiatives/registered-reports}{Center for Open Science}:
 
@@ -267,8 +267,8 @@ Although not all APA journals offer the registered reports format, they may rece
   \end{itemize}
 \end{itemize}
 
-\hypertarget{preregistration}{%
-\chapter{Preregistration}\label{preregistration}}
+\hypertarget{editors-prereg}{%
+\chapter{Preregistration}\label{editors-prereg}}
 
 Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study hypotheses, design, analysis, along with all related materials prepared in advance of the study (protocols, measures, code), depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix~\ref{registries}). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
 
@@ -310,10 +310,12 @@ When editing or reviewing a study that has been preregistered, here are a few th
   OSF preregistration \href{https://osf.io/zab38/wiki/home/}{forms and templates}
 \end{itemize}
 
-\hypertarget{open-materials}{%
-\chapter{Open Materials}\label{open-materials}}
+\hypertarget{editors-open-materials}{%
+\chapter{Open Materials}\label{editors-open-materials}}
 
 Provide research materials and description of procedures necessary to conduct an independent replication of the research.
+
+If research materials are secondary, they should be cited rather than shared directly (see Section~\ref{editors-citation}). Include any information on how others can also obtain the materials.
 
 If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
 
@@ -325,17 +327,19 @@ If research materials are proprietary, include information on how to obtain them
 \item
   Does the TOP statement have the correct link to a publicly accessible version of the materials? (or a statement that data is not available or N/A)
 \item
-  Are the materials clearly \href{https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons}{licensed} for reuse? (e.g., CC-BY)
+  Are the materials clearly licensed for reuse? (see Appendix~\ref{licenses})
 \item
   Are the materials hosted on a persistent archive? (see Appendix~\ref{repositories})
 \end{itemize}
 
-\hypertarget{open-data}{%
-\chapter{Open Data}\label{open-data}}
+\hypertarget{editors-open-data}{%
+\chapter{Open Data}\label{editors-open-data}}
 
 Open data should include all variables, treatment conditions, and observations described in the manuscript, and provide a full account of the procedures used to collect, preprocess, clean, or generate the data. This data should allow for the reproduction of any plots, tables, or analyses reported in the manuscript.
 
-Refer authors to Section~\ref{author-data-tips} for tips and resources to make data open.
+If data are secondary, they should be cited rather than shared directly (see Section~\ref{citation}). Include any information on how others can also obtain the data.
+
+Refer authors to Section~\ref{authors-data-tips} for tips and resources to make data open.
 
 \hypertarget{resources-3}{%
 \section{Resources}\label{resources-3}}
@@ -404,17 +408,19 @@ If all or a subset of the original data are secondary and do not have a license 
 \item
   Is the dataset being shared ethically? Is there any personally identifiable data?
 \item
-  Is the dataset clearly \href{https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons}{licensed} for reuse? (e.g., CC-BY)
+  Is the dataset clearly licensed for reuse? (see Appendix~\ref{licenses})
 \item
   Is the dataset hosted on a persistent archive? (see Appendix~\ref{repositories})
 \end{itemize}
 
-\hypertarget{open-code}{%
-\chapter{Open Code}\label{open-code}}
+\hypertarget{editors-open-code}{%
+\chapter{Open Code}\label{editors-open-code}}
 
 Authors should provide program code, scripts, codebooks, and other documentation sufficient to precisely reproduce all published results.
 
-Refer authors to Section~\ref{author-code-tips} for tips and resources to make code open.
+If research code is entirely secondary, it should be cited rather than shared directly (see Section~\ref{editors-citation}). However, this is likely to be rare, and research code that is modified in any way from the original should be both cited and shared.
+
+Refer authors to Section~\ref{authors-code-tips} for tips and resources to make code open.
 
 If not all data needed to run the code can be shared, encourage authors to include simulated or redacted data so that the code can be tested by others. R packages such as \href{https://www.synthpop.org.uk/}{synthpop}, \href{https://debruine.github.io/faux/}{faux}, and \href{https://kgoldfeld.github.io/simstudy/}{simstudy} can facilitate this. Faux also has a \href{https://shiny.psy.gla.ac.uk/debruine/fauxapp/}{web-based interface} for simulating data from factorial designs (and soon for multilevel designs).
 
@@ -428,13 +434,13 @@ If not all data needed to run the code can be shared, encourage authors to inclu
 \item
   Is there evidence (e.g., author statement, \href{https://codecheck.org.uk/}{CodeCheck} confirmation, or editorial check) that the code contains all components needed to run?
 \item
-  Is the code clearly \href{https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons}{licensed} for reuse? (e.g., CC-BY)
+  Is the code clearly licensed for reuse? (see Appendix~\ref{licenses})
 \item
   Is the code hosted on a persistent archive? (see Appendix~\ref{repositories})
 \end{itemize}
 
-\hypertarget{citation}{%
-\chapter{Citation}\label{citation}}
+\hypertarget{editors-citation}{%
+\chapter{Citation}\label{editors-citation}}
 
 Papers using secondary (i.e., from other sources) data, materials, or analysis code must cite those artifacts in the TOP statement. All citations should be to persistent/stable identifiers (DOIs) whenever possible. If creators of data, materials, or code have provided a preferred citation, that source should be cited, along with a way for readers to access the shared material (e.g., on a website or in a repository).
 
@@ -455,8 +461,8 @@ Sometimes, authors will provide citations in other parts of the Method or Result
   Does the TOP statement include citations for any software or code, including version numbers where relevant?
 \end{itemize}
 
-\hypertarget{authorship}{%
-\chapter{Authorship}\label{authorship}}
+\hypertarget{editors-authorship}{%
+\chapter{Authorship}\label{editors-authorship}}
 
 Per the APA \href{https://www.apa.org/pubs/authors/equity-diversity-inclusion-toolkit}{Equity, Diversity, and Inclusion Toolkit for Journal Editors},
 
@@ -523,10 +529,10 @@ Developed by the Consortia Advancing Standards in Research Administration (CASRA
   Holcombe's accessible \href{https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c}{intro to CRediT, using tenzing}
 \end{itemize}
 
-\hypertarget{preprints}{%
-\chapter{Preprints}\label{preprints}}
+\hypertarget{editors-preprints}{%
+\chapter{Preprints}\label{editors-preprints}}
 
-Preprints are author copies of manuscripts prior to acceptance by a journal. Postprints are author copies of manuscripts after acceptance for publication by a journal. Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication.
+Preprints are author copies of manuscripts prior to acceptance by a journal (preprints are also called ``submitted'' manuscripts). Postprints are author copies of manuscripts after acceptance for publication by a journal (postprints are also called ``accepted'' manuscripts). Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication. As of August 2022, all APA core titles allow posting of preprints and postprints without embargo.
 
 \hypertarget{resources-5}{%
 \section{Resources}\label{resources-5}}
@@ -550,23 +556,109 @@ Preprints are author copies of manuscripts prior to acceptance by a journal. Pos
 \hypertarget{part-authors}{%
 \part{Authors}\label{part-authors}}
 
-\hypertarget{transparency-and-openness-statements-1}{%
-\chapter{Transparency and Openness Statements}\label{transparency-and-openness-statements-1}}
+\hypertarget{authors-top}{%
+\chapter{Transparency and Openness Statements}\label{authors-top}}
 
-\hypertarget{registered-reports-1}{%
-\chapter{Registered Reports}\label{registered-reports-1}}
+To enable readers to quickly and easily find open science disclosures, APA is requiring that authors include a subsection in their paper's Method section titled ``Transparency and Openness''. In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2.
 
-\hypertarget{preregistration-1}{%
-\chapter{Preregistration}\label{preregistration-1}}
+\hypertarget{example-top-statement-1}{%
+\section{Example TOP Statement}\label{example-top-statement-1}}
 
-\hypertarget{open-materials-1}{%
-\chapter{Open Materials}\label{open-materials-1}}
+We report how we determined our sample size, all data exclusions, all manipulations, and all measures in the study, and we follow JARS \citep{kazak2018journal}. All data, analysis code, and research materials are available at {[}stable link to repository{]}. Data were analyzed using R, version 4.0.0 \citep{R} and the package lme4, version 1.1-27.1 \citep{lme4}. This study's design and its analysis were not pre-registered.
 
-\hypertarget{open-data-1}{%
-\chapter{Open Data}\label{open-data-1}}
+\hypertarget{resources-6}{%
+\section{Resources}\label{resources-6}}
 
-\hypertarget{author-data-tips}{%
-\section{Tips}\label{author-data-tips}}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.apa.org/pubs/journals/resources/transparency-openness-promotion}{APA TOP}
+\item
+  \href{https://osf.io/9f6gx/}{OSF TOP}
+\item
+  \href{https://www.cos.io/initiatives/top-guidelines}{COS TOP}
+\item
+  \href{https://apastyle.apa.org/jars}{APA Journal Reporting Standards}
+\end{itemize}
+
+\hypertarget{authors-registered-reports}{%
+\chapter{Registered Reports}\label{authors-registered-reports}}
+
+From \href{https://www.cos.io/initiatives/registered-reports}{Center for Open Science}:
+
+\begin{quote}
+Registered Reports is a publishing format that emphasizes the importance of the research question and the quality of methodology by conducting peer review prior to data collection. High quality protocols are then provisionally accepted for publication if the authors follow through with the registered methodology.
+\end{quote}
+
+\begin{quote}
+This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings.
+\end{quote}
+
+Benefits of the Registered Reports process from the perspective of authors include: receiving in-principle acceptance prior to investing scarce resources in running a study, getting peer input on study design prior to study onset when it is likely to be usefully incorporated, a chance to avoid resubmission of a paper at many journals prior to acceptance, and assurance that null results will receive equal treatment to positive results during consideration of a paper.
+
+Authors have two options for Registered Reports. They may submit directly to a journal that offers the Registered Report submission type, or they may submit to the Peer Community In Registered Reports (PCI-RR). The PCI-RR is a journal independent peer reviewing service that manages the complete (stage 1 and stage 2) review of Registered Reports. After recommendation (i.e., acceptance) through the PCI-RR, authors are able to submit their work directly to participating journals. These journals either agree to accept relevant work outright (friendly journals) or after additional peer review (interested journals).
+
+\hypertarget{resources-7}{%
+\section{Resources}\label{resources-7}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://osf.io/rr/}{OSF RR protocol registration}
+\item
+  \href{https://rr.peercommunityin.org/}{PCI Registered Reports}
+\item
+  \href{https://www.cos.io/initiatives/registered-reports}{Center for Open Science RR Resources}
+\end{itemize}
+
+\hypertarget{authors-prereg}{%
+\chapter{Preregistration}\label{authors-prereg}}
+
+Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study hypotheses, design, analysis, along with all related materials prepared in advance of the study (protocols, measures, code), depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix~\ref{registries}). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
+
+When preparing your preregistration for inclusion in your manuscript, here are a few things to consider. First, make sure that the paper provides a link to the registry where it was preregistered. Self-hosted documents are not recommended. Second, the preregistration should be time-stamped and read-only. Finally, compare the study as reported in the final paper to the preregistered plan. If deviations from the plan have happened (which is typical), make sure that the deviations are transparently reported in the final paper so that readers can evaluate the consequences of the changes. Check to see if all planned analyses are reported in the paper, regardless of statistical significance of the outcome. Make sure that any additional exploratory analyses are transparently marked as such. It might be best to include those analyses in their own well-marked section following any confirmatory analyses.
+
+\hypertarget{resources-8}{%
+\section{Resources}\label{resources-8}}
+
+\begin{itemize}
+\tightlist
+\item
+  A template for preregistration of quantitative research in psychology: Report of the Joint Psychological Societies Preregistration Task Force \citep{bosnjak2021template}
+\item
+  Preregistration of secondary data analysis: A template and tutorial \citep{van2021preregistration}
+\item
+  Recommendations for increasing the transparency of analysis of preexisting data sets \citep{weston2019recommendations}
+\item
+  OSF preregistration \href{https://osf.io/zab38/wiki/home/}{forms and templates}
+\end{itemize}
+
+\hypertarget{authors-open-materials}{%
+\chapter{Open Materials}\label{authors-open-materials}}
+
+Provide research materials and description of procedures necessary to conduct an independent replication of the research.
+
+If research materials are secondary, they should be cited rather than shared directly (see Section~\ref{authors-citation}). Include any information on how others can also obtain the materials.
+
+If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
+
+\hypertarget{authors-materials-tips}{%
+\section{Tips}\label{authors-materials-tips}}
+
+\hypertarget{add-a-license}{%
+\subsection{Add a license}\label{add-a-license}}
+
+If you share your materials, including any figures in the manuscript, using an open license such as CC-BY, this makes reuse straightforward. See Appendix~\ref{licenses} for more details.
+
+\hypertarget{authors-open-data}{%
+\chapter{Open Data}\label{authors-open-data}}
+
+Open data should include all variables, treatment conditions, and observations described in the manuscript, and provide a full account of the procedures used to collect, preprocess, clean, or generate the data. This data should allow for the reproduction of any plots, tables, or analyses reported in the manuscript.
+
+If data are secondary, they should be cited rather than shared directly (see Section~\ref{authors-citation}). Include any information on how others can also obtain the data.
+
+\hypertarget{authors-data-tips}{%
+\section{Tips}\label{authors-data-tips}}
 
 \hypertarget{save-it-in-an-accessible-format}{%
 \subsection{Save it in an accessible format}\label{save-it-in-an-accessible-format}}
@@ -604,7 +696,7 @@ Excel is less preferable because of the proprietary format and its tendency to m
 \item
   Check that you are not sharing any identifiable data (without clear consent), such as names, student ID numbers, postcodes, IP addresses, or uniquely identifying combinations of demographic variables.
 \item
-  Add a \href{https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons}{license} so others know how they can use the data. The most common licenses for data are:
+  Add a license so others know how they can use the data. See Appendix~\ref{licenses} for more details. The most common licenses for data are:
 
   \begin{itemize}
   \tightlist
@@ -636,8 +728,8 @@ Excel is less preferable because of the proprietary format and its tendency to m
   Make sure the paper contains the correct links to the data before publication.
 \end{itemize}
 
-\hypertarget{resources-6}{%
-\section{Resources}\label{resources-6}}
+\hypertarget{resources-9}{%
+\section{Resources}\label{resources-9}}
 
 \begin{itemize}
 \tightlist
@@ -645,11 +737,13 @@ Excel is less preferable because of the proprietary format and its tendency to m
   \href{https://www.icpsr.umich.edu/web/pages/deposit/guide/index.html}{Guide to Social Science Data Preparation and Archiving}
 \end{itemize}
 
-\hypertarget{open-code-1}{%
-\chapter{Open Code}\label{open-code-1}}
+\hypertarget{authors-open-code}{%
+\chapter{Open Code}\label{authors-open-code}}
 
-\hypertarget{author-code-tips}{%
-\section{Tips}\label{author-code-tips}}
+If research code is entirely secondary, it should be cited rather than shared directly (see Section~\ref{authors-citation}). However, this is likely to be rare, and research code that is modified in any way from the original should be both cited and shared.
+
+\hypertarget{authors-code-tips}{%
+\section{Tips}\label{authors-code-tips}}
 
 \hypertarget{make-it-reproducible}{%
 \subsection{Make it reproducible}\label{make-it-reproducible}}
@@ -717,15 +811,35 @@ Excel is less preferable because of the proprietary format and its tendency to m
 
 NB: If your code takes a very long time to run, such as when you have extremely large datasets or are running simulations, you can include smaller test datasets or run a smaller number of replications and include code at the top of the script to toggle real and test data or low and high numbers of reps.
 
-Finally, \protect\hyperlink{make-it-findable}{make your code findable} using the same tips from the \protect\hyperlink{open-data}{open data section}. \href{https://github.com/}{GitHub} is a common place to share code, but doesn't create a DOI, so if you use github, consider archiving a snapshot of your repository on \href{https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content}{zenodo}.
+\hypertarget{share-and-license}{%
+\subsection{Share and license}\label{share-and-license}}
 
-\hypertarget{citation-1}{%
-\chapter{Citation}\label{citation-1}}
+\begin{itemize}
+\tightlist
+\item
+  Add a license so others know how they can use and modify the code. See Appendix~\ref{licenses} for more details.
+\item
+  Make your code findable using the same tips from Section~\ref{make-it-findable}
+\item
+  \href{https://github.com/}{GitHub} is a common place to share code, but doesn't create a DOI, so if you use github, consider archiving a snapshot of your repository on \href{https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content}{zenodo}.
+\end{itemize}
 
-\hypertarget{authorship-1}{%
-\chapter{Authorship}\label{authorship-1}}
+\hypertarget{authors-citation}{%
+\chapter{Citation}\label{authors-citation}}
+
+Papers using secondary (i.e., from other sources) data, materials, or analysis code must cite those artifacts in the TOP statement. All citations should be to persistent/stable identifiers (DOIs) whenever possible. If creators of data, materials, or code have provided a preferred citation, that source should be cited, along with a way for readers to access the shared material (e.g., on a website or in a repository).
+
+Note, secondary analysis code includes software packages (e.g., R packages), as well as custom analysis code (e.g., code that you, as authors, did not write, but that someone else prepared for a specific use). The majority of papers will have some research software to cite, and it is often overlooked or forgotten. Remember to include version numbers with any software packages. If the amount of information is extensive, a supplementary table can be included with the relevant version and citation information.
+
+You might be tempted to provide citations in other parts of the Method or Results sections (e.g., Analysis Plan for secondary code or Materials for secondary materials), but for completeness, such information should be relocated to the TOP statement. Citations in the TOP statement should be, where possible, to the source of the material, data, software or code, rather than to papers that only describe the material, but do not provide access to it. Such descriptive citations can be included in the main text of the paper, if desired.
+When data, materials, or code are primary (i.e., created by your author team and published alongside your article), remember to openly license those artifacts and see the Open Data, Open Materials, and Open Code sections for more guidance. When data, materials, or code are secondary, make sure to cite those artifacts as described here, and avoid sharing copies those artifacts in full to avoid issues with copyright (unless they are permissively licensed to allow such sharing).
+
+\hypertarget{authors-authorship}{%
+\chapter{Authorship}\label{authors-authorship}}
 
 Specifying each author's roles allows for transparent attribution of credit, especially when papers have many authors. The Tenzing \href{https://marton-balazs-kovacs.github.io/tenzing/}{r package} or \href{https://tenzing.club/}{web app} app can help you manage this.
+
+You may include a statement of author contributions whether or not the journal requires CRediT statements. Simply include the statement of contributions in the Author Note unless other directions are provided in a journal's submission guidelines. See the resources section below for tips on preparing CRediT statements.
 
 \hypertarget{roles-1}{%
 \section{Roles}\label{roles-1}}
@@ -762,8 +876,8 @@ Specifying each author's roles allows for transparent attribution of credit, esp
   Writing - review \& editing: Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages.
 \end{itemize}
 
-\hypertarget{resources-7}{%
-\section{Resources}\label{resources-7}}
+\hypertarget{resources-10}{%
+\section{Resources}\label{resources-10}}
 
 \begin{itemize}
 \tightlist
@@ -775,40 +889,44 @@ Specifying each author's roles allows for transparent attribution of credit, esp
   Holcombe's accessible \href{https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c}{intro to CRediT, using tenzing}
 \end{itemize}
 
-\hypertarget{preprints-1}{%
-\chapter{Preprints}\label{preprints-1}}
+\hypertarget{authors-preprints}{%
+\chapter{Preprints}\label{authors-preprints}}
+
+Preprints are author copies of manuscripts prior to acceptance by a journal (preprints are also called ``submitted'' manuscripts). Postprints are author copies of manuscripts after acceptance for publication by a journal (postprints are also called ``accepted'' manuscripts). Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication. As of August 2022, all APA core titles allow posting of preprints and postprints without embargo.
+
+Most journals in psychology allow the submission of preprints (submitted manuscripts) to disciplinary repositories like PsyArXiv without embargo or restriction, and a growing number also allow submission of postprints (accepted manuscripts) without any embargo. By contrast, the journal-typeset version of an article is often referred to as the ``published version,'' and this version is usually subject to more restrictions on sharing. Authors can check \href{https://v2.sherpa.ac.uk/romeo/}{Sherpa Romeo} to verify the policies of the journal to which they are submitting or have been accepted.
 
 \hypertarget{part-reviewers}{%
 \part{Reviewers}\label{part-reviewers}}
 
-\hypertarget{transparency-and-openness-statements-2}{%
-\chapter{Transparency and Openness Statements}\label{transparency-and-openness-statements-2}}
+\hypertarget{transparency-and-openness-statements}{%
+\chapter{Transparency and Openness Statements}\label{transparency-and-openness-statements}}
 
 \href{https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx}{What to Check} in TOP statements for journals with TOP Level 1 or Level 2
 
-\hypertarget{registered-reports-2}{%
-\chapter{Registered Reports}\label{registered-reports-2}}
+\hypertarget{registered-reports}{%
+\chapter{Registered Reports}\label{registered-reports}}
 
-\hypertarget{preregistration-2}{%
-\chapter{Preregistration}\label{preregistration-2}}
+\hypertarget{preregistration}{%
+\chapter{Preregistration}\label{preregistration}}
 
-\hypertarget{open-materials-2}{%
-\chapter{Open Materials}\label{open-materials-2}}
+\hypertarget{open-materials}{%
+\chapter{Open Materials}\label{open-materials}}
 
-\hypertarget{open-data-2}{%
-\chapter{Open Data}\label{open-data-2}}
+\hypertarget{open-data}{%
+\chapter{Open Data}\label{open-data}}
 
-\hypertarget{open-code-2}{%
-\chapter{Open Code}\label{open-code-2}}
+\hypertarget{open-code}{%
+\chapter{Open Code}\label{open-code}}
 
-\hypertarget{citation-2}{%
-\chapter{Citation}\label{citation-2}}
+\hypertarget{citation}{%
+\chapter{Citation}\label{citation}}
 
-\hypertarget{authorship-2}{%
-\chapter{Authorship}\label{authorship-2}}
+\hypertarget{authorship}{%
+\chapter{Authorship}\label{authorship}}
 
-\hypertarget{preprints-2}{%
-\chapter{Preprints}\label{preprints-2}}
+\hypertarget{preprints}{%
+\chapter{Preprints}\label{preprints}}
 
 \hypertarget{appendix-appendices}{%
 \appendix}
@@ -830,6 +948,12 @@ This section will contain a glossary of relevant open science terminology. See a
 \hypertarget{licenses}{%
 \chapter{Licenses}\label{licenses}}
 
+Shared code, data, and materials (including manuscript figures) should have an explicit license, such as CC-BY. This makes reuse straightforward.
+
+Authors may wish to contact their research office to discuss appropriate licenses for their situation, as whether research outputs should be licensed to the authors or their place of employment can differ between countries.
+
+While there is some ambiguity, many recommend against sharing research outputs using a CC-BY-NC licence, which prohibits commercial reuse, including in journal articles, or CC-BY-ND, which prohibits derivative use, such as meta-analyses or replications.
+
 \begin{itemize}
 \tightlist
 \item
@@ -838,6 +962,10 @@ This section will contain a glossary of relevant open science terminology. See a
   \href{https://creativecommons.org}{Creative Commons Licenses}
 \item
   \href{https://opensource.org/licenses}{Open-source licenses} for code
+\item
+  \href{https://openaccess.ox.ac.uk/2013/06/13/cc-by-what-does-it-mean-for-scholarly-articles-3/}{CC BY: what does it mean for scholarly articles?}
+\item
+  \href{https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons}{Licenses for data sharing}
 \end{itemize}
 
 \hypertarget{repositories}{%
