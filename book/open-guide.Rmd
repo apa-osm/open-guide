@@ -1,0 +1,1092 @@
+--- 
+title: "APA Open Guide"
+author: "OSM"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [bib.bib]
+csl: include/apa.csl
+classoption: oneside
+geometry: margin=1in
+urlcolor: blue
+link-citations: yes
+description: "Information about TOP guidelines at APA journals."
+url: https://apa-osm.github.io/open-guide/
+github-repo: apa-osm/open-guide
+cover-image: images/logos/logo.png
+apple-touch-icon: images/logos/apple-touch-icon.png
+apple-touch-icon-size: 180
+favicon: images/logos/favicon.ico
+---
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+# psyTeachR styles and functions
+# do not edit!!!!!
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(glossary)
+})
+
+# default knitr options
+knitr::opts_chunk$set(
+  echo       = TRUE,
+  results    = "hold",
+  out.width  = '100%',
+  fig.width  = 8,
+  fig.height = 4.5,
+  fig.align  = 'center'
+)
+
+## set global theme options for figures
+#theme_set(theme_bw())
+
+## set class for a chunk using class="className"
+knitr::knit_hooks$set(class = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class = '%s'>", options$class)
+  } else {
+    "</div>"
+  }
+})
+
+## verbatim code chunks
+knitr::knit_hooks$set(verbatim = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class='verbatim'><pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;{%s}</code></pre>", options$verbatim)
+  } else {
+    "<pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;</code></pre></div>"
+  }
+})
+
+## verbatim inline R in backticks
+backtick <- function(code) {
+  #warning("The backtick() function is deprecated. Use two backticks and a space to surround text with verbatim backticks, e.g. `` `in_backticks` ``")
+  # removes inline math coding when you use >1 $ in a line
+  code <- gsub("\\$", "\\\\$", code)
+  paste0("<code>&#096;", code, "&#096;</code>")
+}
+
+## palette with psyTeachR logo colour
+psyteachr_colours <- function(vals = 1:6) {
+  ptrc <- c(
+    "pink" = "#983E82",
+    "orange" = "#E2A458",
+    "yellow" = "#F5DC70",
+    "green" = "#59935B",
+    "blue" = "#467AAC",
+    "purple" = "#61589C"
+  )
+
+  unname(ptrc[vals])
+}
+psyteachr_colors <- psyteachr_colours
+
+# inline code highlighting and styles
+
+hl <- function(code) {
+  txt <- rlang::enexpr(code) %>% rlang::as_label()
+
+  downlit::highlight(txt, classes = downlit::classes_pandoc()) %>%
+    gsub("a href", "a target='_blank' href", .) %>%
+    paste0("<code>", . , "</code>")
+}
+
+path <- function(txt) {
+  sprintf("<code class='path'>%s</code>", txt)
+}
+
+pkg <- function(txt, url = NULL) {
+  if (is.null(url)) {
+    sprintf("<code class='package'>%s</code>", txt)
+  } else {
+    sprintf("<code class='package'><a href='%s' target='_blank'>%s</a></code>", url, txt)
+  }
+}
+# book-specific code to include on every page
+```
+
+# Overview {-}
+
+This guide is for editors, reviewers, and authors of APA submissions, to help them understand APA initiatives for open and transparent research, such as the TOP guidelines. The guiding principle is improving scientific rigour and increasing the transparency and accessibility of research; adjust any of the guidance for specific topics or circumstances in the service of those goals.
+
+**The guide is in draft form. We are starting with guidance for editors and authors. We will be adding guidance for reviewers soon. We welcome feedback and suggestions for further guidance.**
+
+## TOP Guidelines
+
+* [APA Transparency and Openness Promotion](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion){target="_blank"}
+* [COS TOP Guidelines](https://www.cos.io/initiatives/top-guidelines){target="_blank"}
+* [OSF TOP Resources](https://osf.io/9f6gx/){target="_blank"}
+
+## Getting Started with Open Science
+
+* [An open science workflow for more credible, rigorous research](https://psyarxiv.com/wu6sn){target="_blank"} [@corker2021open]
+
+* [Seven easy steps to open science](https://doi.org/10.1027/2151-2604/a000387){target="_blank"} [@cruwell2019seven]
+
+* [Easing into open science: A guide for graduate students and their advisors](https://doi.org/10.1525/collabra.18684){target="_blank"} [@kathawalla2021easing]
+
+* [A community-sourced glossary of open scholarship terms](https://doi.org/10.1038/s41562-021-01269-4){target="_blank"} [@parsons2022community]
+
+* Spellman, B. A., Gilbert, E. A., & Corker, K. S. (2018). Open science. In E. J. Wagenmakers (Volume Ed.) & J. T. Wixted (Series Ed.) Stevens’ Handbook of Experimental Psychology and Cognitive Neuroscience Volume 5: Methodology (4th ed.). Preprint at <https://osf.io/gv6r4/>{target="_blank"}
+
+<!--chapter:end:index.Rmd-->
+
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+# psyTeachR styles and functions
+# do not edit!!!!!
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(glossary)
+})
+
+# default knitr options
+knitr::opts_chunk$set(
+  echo       = TRUE,
+  results    = "hold",
+  out.width  = '100%',
+  fig.width  = 8,
+  fig.height = 4.5,
+  fig.align  = 'center'
+)
+
+## set global theme options for figures
+#theme_set(theme_bw())
+
+## set class for a chunk using class="className"
+knitr::knit_hooks$set(class = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class = '%s'>", options$class)
+  } else {
+    "</div>"
+  }
+})
+
+## verbatim code chunks
+knitr::knit_hooks$set(verbatim = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class='verbatim'><pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;{%s}</code></pre>", options$verbatim)
+  } else {
+    "<pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;</code></pre></div>"
+  }
+})
+
+## verbatim inline R in backticks
+backtick <- function(code) {
+  #warning("The backtick() function is deprecated. Use two backticks and a space to surround text with verbatim backticks, e.g. `` `in_backticks` ``")
+  # removes inline math coding when you use >1 $ in a line
+  code <- gsub("\\$", "\\\\$", code)
+  paste0("<code>&#096;", code, "&#096;</code>")
+}
+
+## palette with psyTeachR logo colour
+psyteachr_colours <- function(vals = 1:6) {
+  ptrc <- c(
+    "pink" = "#983E82",
+    "orange" = "#E2A458",
+    "yellow" = "#F5DC70",
+    "green" = "#59935B",
+    "blue" = "#467AAC",
+    "purple" = "#61589C"
+  )
+
+  unname(ptrc[vals])
+}
+psyteachr_colors <- psyteachr_colours
+
+# inline code highlighting and styles
+
+hl <- function(code) {
+  txt <- rlang::enexpr(code) %>% rlang::as_label()
+
+  downlit::highlight(txt, classes = downlit::classes_pandoc()) %>%
+    gsub("a href", "a target='_blank' href", .) %>%
+    paste0("<code>", . , "</code>")
+}
+
+path <- function(txt) {
+  sprintf("<code class='path'>%s</code>", txt)
+}
+
+pkg <- function(txt, url = NULL) {
+  if (is.null(url)) {
+    sprintf("<code class='package'>%s</code>", txt)
+  } else {
+    sprintf("<code class='package'><a href='%s' target='_blank'>%s</a></code>", url, txt)
+  }
+}
+# book-specific code to include on every page
+```
+# (PART) Editors {-}
+
+# Transparency and Openness Statements {#editors-top}
+
+To enable readers to quickly and easily find open science disclosures, APA is requiring that authors include a subsection in their paper's Method section titled "Transparency and Openness". In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP Level 1 or Level 2. 
+
+## Example TOP Statement
+
+> We report how we determined our sample size, all data exclusions, all manipulations, and all measures in the study, and we follow JARS [@kazak2018journal]. All data, analysis code, and research materials are available at [stable link to repository]. Data were analyzed using R, version 4.0.0 [@R] and the package lme4, version 1.1-27.1 [@lme4]. This study's design and its analysis were not pre-registered.
+    
+## Resources
+
+* [What to check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx){target="_blank"} in transparency and openness statements for journals with TOP Level 1 or Level 2
+* [Introduction to TOP at APA for editors](https://www.dropbox.com/s/rx616egpte53o9m/TOP_at_APA_withScript.pdf){target="_blank"}
+* [APA TOP](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion){target="_blank"}
+* [OSF TOP](https://osf.io/9f6gx/){target="_blank"}
+* [COS TOP](https://www.cos.io/initiatives/top-guidelines){target="_blank"}
+* [TOP Mixed Level Journals](https://docs.google.com/document/d/10cMB2IT406gPAgCAORa5_UVI6Plrwvl4XjTsd0Ya_4s/edit){target="_blank"}
+* [APA Journal Reporting Standards](https://apastyle.apa.org/jars){target="_blank"}
+
+
+
+# Registered Reports {#editors-registered-reports}
+
+From [Center for Open Science](https://www.cos.io/initiatives/registered-reports){target="_blank"}:
+
+> Registered Reports is a publishing format that emphasizes the importance of the research question and the quality of methodology by conducting peer review prior to data collection. High quality protocols are then provisionally accepted for publication if the authors follow through with the registered methodology.
+
+> This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings.
+
+Although not all APA journals offer the registered reports format, they may receive submissions that have been through the registered reports process at [PCI Registered Reports](https://rr.peercommunityin.org/){target="_blank"}, which will make all reviews and editorial communication publicly available. Such submissions can be treated like papers with a [preregistration](#preregistration){target="_blank"} (that has additionally been through a rigorous open review process).
+
+## Resources
+
+* [OSF RR protocol registration](https://osf.io/rr/){target="_blank"}
+* [PCI Registered Reports](https://rr.peercommunityin.org/){target="_blank"}
+* [Center for Open Science RR Resources](https://www.cos.io/initiatives/registered-reports){target="_blank"}:
+    * [Fact sheet for editors](https://osf.io/jbeus/){target="_blank"}
+    * [Template guide to authors and reviewers](https://osf.io/pukzy/){target="_blank"}
+    * [Templates of reviewer invitation letters and author decision letters](https://osf.io/5adi7/){target="_blank"}
+    * [Implementation checklist](https://osf.io/2m4ct/){target="_blank"}
+
+
+# Preregistration  {#editors-prereg}
+
+Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study hypotheses, design, analysis, along with all related materials prepared in advance of the study (protocols, measures, code), depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix\ \@ref(registries)). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
+
+When editing or reviewing a study that has been preregistered, here are a few things to consider. First, make sure that the study provides a link to the registry where it was preregistered. Self-hosted documents are not recommended. Second, the preregistration should be time-stamped and read-only. Finally, if resources permit, compare the study as reported in the final paper to the preregistered plan. If deviations from the plan have happened (which is typical), make sure that the deviations are transparently reported in the final paper so that readers can evaluate the consequences of the changes. Check to see if all planned analyses are reported in the paper, regardless of statistical significance of the outcome. 
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TOP statement have the correct link to a publicly accessible version of the preregistration? (or a statement that preregistration is not available or N/A)
+* Does the TOP statement specify whether the preregistration covers study design and/or analysis plan?
+* Is the preregistration hosted on a persistent archive? (see Appendix\ \@ref(registries))
+* Is the preregistration time-stamped?
+* Are all deviations from the plan transparently reported?
+* Are all planned analyses are reported in the paper, regardless of statistical significance of the outcome?
+* Are all unplanned analyses transparently marked as exploratory?
+
+:::
+
+## Resources
+
+* A template for preregistration of quantitative research in psychology: Report of the Joint Psychological Societies Preregistration Task Force [@bosnjak2021template]
+* Preregistration of secondary data analysis: A template and tutorial [@van2021preregistration]
+* Recommendations for increasing the transparency of analysis of preexisting data sets [@weston2019recommendations]
+* OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/){target="_blank"}
+
+
+# Open Materials {#editors-open-materials}
+
+Provide research materials and description of procedures necessary to conduct an independent replication of the research.
+
+If research materials are secondary, they should be cited rather than shared directly (see Section\ \@ref(editors-citation)). Include any information on how others can also obtain the materials.
+
+If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TOP statement have the correct link to a publicly accessible version of the materials? (or a statement that data is not available or N/A)
+* Are the materials clearly licensed for reuse? (see Appendix\ \@ref(licenses))
+* Are the materials hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+
+:::
+
+
+# Open Data {#editors-open-data}
+
+Open data should include all variables, treatment conditions, and observations described in the manuscript, and provide a full account of the procedures used to collect, preprocess, clean, or generate the data. This data should allow for the reproduction of any plots, tables, or analyses reported in the manuscript.
+
+If data are secondary, they should be cited rather than shared directly (see Section\ \@ref(citation)). Include any information on how others can also obtain the data.
+
+Refer authors to Section\ \@ref(authors-data-tips) for tips and resources to make data open.
+
+## Resources
+
+* Data Management and Data Sharing in Psychological Science: Revision of the DGPs Recommendations [@gollwitzer_2020]
+* Is It Time to Share Qualitative Research Data? [@dubois2018time]
+* [APA Statement on data sharing](https://www.apa.org/pubs/journals/resources/data-sharing){target="_blank"}
+
+## Data sharing issues
+
+While it is ideal to shared the raw data exactly as collected, and include instructions or code needed to clean and process it to the analysed data, this may not be possible due to privacy or ethical issues. However, there are solutions that allow for partial sharing. For example, if it is impossible to share individual-level or trial-level data, authors could provide item-level and scale-level descriptives, variance/covariances, both for the full data set and stratified by subgroups.
+
+### Data are not anonymizable
+
+Data may be in a format, such as videos of interviews, where it is not possible to make them anonymous. Consider recommending that they be archived at a managed-access data archiving service, such as the [UK Data Service](https://ukdataservice.ac.uk/deposit-data/){target="_blank"} or [Databrary](https://databrary.org/about/agreement.html){target="_blank"}. See Appendix\ \@ref(repositories) for a list of data repositories.
+
+### Anonymity could be compromised by data triangulation 
+
+Triangulation is when a combination of variables can uniquely identify some subjects, such as when there is only one person of a given age, gender, and ethnicity at the university of data collection. Measures can be taken such as omitting some data or redacting some levels of variables (e.g., grouping small-n groups under "Other"). An unredacted version can be stored in a managed-access archive.
+
+### Data are owned by others
+
+If all or a subset of the original data are secondary and do not have a license compatible with re-sharing, the authors should detail the steps needed to access the original data from the source. Authors should be encouraged to determine if it is possible to share processed data at a higher level. For example, if it is permissible to show a scatter plot of data in a publication, it should also be permissible to archive a tabular version of the data in that format. 
+
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TOP statement have the correct link to a publicly accessible version of the data? (or a statement that data is not available or N/A)
+* Does the dataset contain the data required to produce all tables, plots, and analyses in the manuscript?
+    * If no, is any omission noted and explained?
+    * If raw data are shared, is there code or instructions for processing it?
+* Is the dataset saved in an accessible format? (An order of preference for accessibility is CSV > Excel > SPSS)
+* Are the variables clearly explained?
+    * Is there a codebook?
+    * Are level values understandable?
+    * Are units clear?
+* Is the dataset being shared ethically? Is there any personally identifiable data?
+* Is the dataset clearly licensed for reuse? (see Appendix\ \@ref(licenses))
+* Is the dataset hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+
+
+:::
+
+# Open Code {#editors-open-code}
+
+Authors should provide program code, scripts, codebooks, and other documentation sufficient to precisely reproduce all published results.
+
+If research code is entirely secondary, it should be cited rather than shared directly (see Section\ \@ref(editors-citation)). However, this is likely to be rare, and research code that is modified in any way from the original should be both cited and shared. 
+
+Refer authors to Section\ \@ref(authors-code-tips) for tips and resources to make code open.
+
+If not all data needed to run the code can be shared, encourage authors to include simulated or redacted data so that the code can be tested by others. R packages such as [synthpop](https://www.synthpop.org.uk/){target="_blank"}, [faux](https://debruine.github.io/faux/){target="_blank"}, and [simstudy](https://kgoldfeld.github.io/simstudy/){target="_blank"} can facilitate this. Faux also has a [web-based interface](https://shiny.psy.gla.ac.uk/debruine/fauxapp/){target="_blank"} for simulating data from factorial designs (and soon for multilevel designs).
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TOP statement have the correct link to a publicly accessible version of the code? (or a statement that code is not available or N/A)
+* Is there evidence (e.g., author statement, [CodeCheck](https://codecheck.org.uk/){target="_blank"} confirmation, or editorial check) that the code contains all components needed to run?
+* Is the code clearly licensed for reuse? (see Appendix\ \@ref(licenses))
+* Is the code hosted on a persistent archive? (see Appendix\ \@ref(repositories))
+
+:::
+
+# Citation {#editors-citation}
+
+Papers using secondary (i.e., from other sources) data, materials, or analysis code must cite those artifacts in the TOP statement. All citations should be to persistent/stable identifiers (DOIs) whenever possible. If creators of data, materials, or code have provided a preferred citation, that source should be cited, along with a way for readers to access the shared material (e.g., on a website or in a repository). 
+
+Note, secondary analysis code includes software packages (e.g., R packages), as well as custom analysis code (e.g., code that the paper authors did not write, but someone else prepared for a specific use). The majority of papers will have some research software to cite, and it is often overlooked or forgotten. Encourage authors to include version numbers with any software packages. If the amount of information is extensive, a supplementary table can be included with the relevant version and citation information. 
+
+Sometimes, authors will provide citations in other parts of the Method or Results sections (e.g., Analysis Plan for secondary code or Materials for secondary materials), but for completeness, such information should be encouraged to be relocated to the TOP statement. Citations in the TOP statement should be, where possible, to the source of the material, data, software or code, rather than to papers that only describe the material, but do not provide access to it. Such descriptive citations can be included in the main text of the paper.
+
+
+## Checklist
+
+::: {.checklist}
+
+* Does the TOP statement include citations for any secondary material?
+* Does the TOP statement include citations for any secondary data?
+* Does the TOP statement include citations for any software or code, including version numbers where relevant?
+
+:::
+
+# Authorship {#editors-authorship}
+
+Per the APA [Equity, Diversity, and Inclusion Toolkit for Journal Editors](https://www.apa.org/pubs/authors/equity-diversity-inclusion-toolkit){target="_blank"}, 
+
+> Developed by the Consortia Advancing Standards in Research Administration (CASRAI) and National Information Standards Organization (NISO), CRediT is a high-level taxonomy comprised of 14 contributor roles, each of which can be modified by a degree of contribution (lead, equal, or supporting). The full taxonomy with definitions for each role can be found on the [NISO website](https://casrai.org/credit/){target="_blank"}. Author contribution statements promote equity and inclusion by specifically attributing contributions to each author. Author contribution statements likewise allow for the inclusion of collaborators whose contributions are less obviously represented in the written article, such as colleagues who may have provided input in early stages of an article or who handled more logistical aspects of the research. CRediT is likewise a useful tool for measuring potential inequities in the division of scientific labor by gender or other demographics. For instance, @lariviere2021investigating offer an analysis on the gender division of labor using CRediT data from PLOS journals.
+
+## Roles
+
+* Conceptualization: Ideas; formulation or evolution of overarching research goals and aims.
+* Data curation: Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later re-use.
+* Formal analysis: Application of statistical, mathematical, computational, or other formal techniques to analyse or synthesize study data.
+* Funding acquisition: Acquisition of the financial support for the project leading to this publication.
+* Investigation: Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.
+* Methodology: Development or design of methodology; creation of models.
+* Project administration: Management and coordination responsibility for the research activity planning and execution.
+* Resources: Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.
+* Software: Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.
+* Supervision: Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.
+* Validation: Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.
+* Visualization: Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.
+* Writing - original draft: Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).
+* Writing - review & editing: Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages.
+
+## Checklist
+
+::: {.checklist}
+
+* Does the manuscript include a statement of author roles?
+* Do author roles conform to the CRediT Taxonomy? 
+
+:::
+
+## Resources
+
+* [Casrai CRediT](https://casrai.org/credit/){target="_blank"}
+* Contributorship, not authorship: Use CRediT to indicate who did what [@holcombe2019contributorship]
+* Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c){target="_blank"}
+
+# Preprints and Postprints {#editors-preprints}
+
+Preprints are author copies of manuscripts prior to acceptance by a journal (preprints are also called "submitted" manuscripts). Postprints are author copies of manuscripts after acceptance for publication by a journal (postprints are also called "accepted" manuscripts). Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication. As of August 2022, all APA core titles allow posting of preprints and postprints without embargo.
+
+## Resources
+
+* [FAQs about preprints](http://blog.psyarxiv.com/2016/09/19/psyarxiv-faq/){target="_blank"}
+* A guide to posting and managing preprints [@moshontz2021guide]
+* [PsyArXiv](https://psyarxiv.com/){target="_blank"}
+* [PLoS Preprints](https://plos.org/open-science/preprints/){target="_blank"}
+* In praise of preprints [@fry2019praise]
+* Not one but many models of open-access publishing [@condon2020not]
+
+
+<!--chapter:end:01-editors.Rmd-->
+
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+# psyTeachR styles and functions
+# do not edit!!!!!
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(glossary)
+})
+
+# default knitr options
+knitr::opts_chunk$set(
+  echo       = TRUE,
+  results    = "hold",
+  out.width  = '100%',
+  fig.width  = 8,
+  fig.height = 4.5,
+  fig.align  = 'center'
+)
+
+## set global theme options for figures
+#theme_set(theme_bw())
+
+## set class for a chunk using class="className"
+knitr::knit_hooks$set(class = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class = '%s'>", options$class)
+  } else {
+    "</div>"
+  }
+})
+
+## verbatim code chunks
+knitr::knit_hooks$set(verbatim = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class='verbatim'><pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;{%s}</code></pre>", options$verbatim)
+  } else {
+    "<pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;</code></pre></div>"
+  }
+})
+
+## verbatim inline R in backticks
+backtick <- function(code) {
+  #warning("The backtick() function is deprecated. Use two backticks and a space to surround text with verbatim backticks, e.g. `` `in_backticks` ``")
+  # removes inline math coding when you use >1 $ in a line
+  code <- gsub("\\$", "\\\\$", code)
+  paste0("<code>&#096;", code, "&#096;</code>")
+}
+
+## palette with psyTeachR logo colour
+psyteachr_colours <- function(vals = 1:6) {
+  ptrc <- c(
+    "pink" = "#983E82",
+    "orange" = "#E2A458",
+    "yellow" = "#F5DC70",
+    "green" = "#59935B",
+    "blue" = "#467AAC",
+    "purple" = "#61589C"
+  )
+
+  unname(ptrc[vals])
+}
+psyteachr_colors <- psyteachr_colours
+
+# inline code highlighting and styles
+
+hl <- function(code) {
+  txt <- rlang::enexpr(code) %>% rlang::as_label()
+
+  downlit::highlight(txt, classes = downlit::classes_pandoc()) %>%
+    gsub("a href", "a target='_blank' href", .) %>%
+    paste0("<code>", . , "</code>")
+}
+
+path <- function(txt) {
+  sprintf("<code class='path'>%s</code>", txt)
+}
+
+pkg <- function(txt, url = NULL) {
+  if (is.null(url)) {
+    sprintf("<code class='package'>%s</code>", txt)
+  } else {
+    sprintf("<code class='package'><a href='%s' target='_blank'>%s</a></code>", url, txt)
+  }
+}
+# book-specific code to include on every page
+```
+# (PART) Authors {-}
+
+# Transparency and Openness Statements {#authors-top}
+
+To enable readers to quickly and easily find open science disclosures, APA is requiring that authors include a subsection in their paper's Method section titled "Transparency and Openness". In this brief section, authors should disclose relevant details about seven TOP domains: availability of data, availability of code, availability of materials, citation to secondary data/code/materials (including citations of statistical software and packages), reporting standards, preregistration of study designs, and preregistration of analysis plans. The requirements for the information disclosed will depend on whether a journal has endorsed TOP level 1 or level 2. 
+
+## Example TOP Statement
+
+We report how we determined our sample size, all data exclusions, all manipulations, and all measures in the study, and we follow JARS [@kazak2018journal]. All data, analysis code, and research materials are available at [stable link to repository]. Data were analyzed using R, version 4.0.0 [@R] and the package lme4, version 1.1-27.1 [@lme4]. This study's design and its analysis were not pre-registered.
+    
+## Resources
+
+* [APA TOP](https://www.apa.org/pubs/journals/resources/transparency-openness-promotion){target="_blank"}
+* [OSF TOP](https://osf.io/9f6gx/){target="_blank"}
+* [COS TOP](https://www.cos.io/initiatives/top-guidelines){target="_blank"}
+* [APA Journal Reporting Standards](https://apastyle.apa.org/jars){target="_blank"}
+
+
+# Registered Reports {#authors-registered-reports}
+
+From [Center for Open Science](https://www.cos.io/initiatives/registered-reports){target="_blank"}:
+
+> Registered Reports is a publishing format that emphasizes the importance of the research question and the quality of methodology by conducting peer review prior to data collection. High quality protocols are then provisionally accepted for publication if the authors follow through with the registered methodology.
+
+> This format is designed to reward best practices in adhering to the hypothetico-deductive model of the scientific method. It eliminates a variety of questionable research practices, including low statistical power, selective reporting of results, and publication bias, while allowing complete flexibility to report serendipitous findings.
+
+Benefits of the Registered Reports process from the perspective of authors include: receiving in-principle acceptance prior to investing scarce resources in running a study, getting peer input on study design prior to study onset when it is likely to be usefully incorporated, a chance to avoid resubmission of a paper at many journals prior to acceptance, and assurance that null results will receive equal treatment to positive results during consideration of a paper.
+
+Authors have two options for Registered Reports. They may submit directly to a journal that offers the Registered Report submission type, or they may submit to the Peer Community In Registered Reports (PCI-RR). The PCI-RR is a journal independent peer reviewing service that manages the complete (stage 1 and stage 2) review of Registered Reports. After recommendation (i.e., acceptance) through the PCI-RR, authors are able to submit their work directly to participating journals. These journals either agree to accept relevant work outright (friendly journals) or after additional peer review (interested journals). 
+
+## Resources
+
+* [OSF RR protocol registration](https://osf.io/rr/){target="_blank"}
+* [PCI Registered Reports](https://rr.peercommunityin.org/){target="_blank"}
+* [Center for Open Science RR Resources](https://www.cos.io/initiatives/registered-reports){target="_blank"}
+
+# Preregistration {#authors-prereg}
+
+Preregistration is a process of planning a study and then making those plans transparently available in a read-only, time-stamped repository. A preregistration may contain study hypotheses, design, analysis, along with all related materials prepared in advance of the study (protocols, measures, code), depending on a researcher's goals. Studies involving the collection of new data may be preregistered, as can analysis of secondary data. A registration refers to the entry of a study in a publicly accessible study registry (see Appendix\ \@ref(registries)). A protocol refers to detailed plans outlining study methods, analysis plans and/or theoretical predictions.
+
+When preparing your preregistration for inclusion in your manuscript, here are a few things to consider. First, make sure that the paper provides a link to the registry where it was preregistered. Self-hosted documents are not recommended. Second, the preregistration should be time-stamped and read-only. Finally, compare the study as reported in the final paper to the preregistered plan. If deviations from the plan have happened (which is typical), make sure that the deviations are transparently reported in the final paper so that readers can evaluate the consequences of the changes. Check to see if all planned analyses are reported in the paper, regardless of statistical significance of the outcome. Make sure that any additional exploratory analyses are transparently marked as such. It might be best to include those analyses in their own well-marked section following any confirmatory analyses. 
+
+## Resources
+
+* A template for preregistration of quantitative research in psychology: Report of the Joint Psychological Societies Preregistration Task Force [@bosnjak2021template]
+* Preregistration of secondary data analysis: A template and tutorial [@van2021preregistration]
+* Recommendations for increasing the transparency of analysis of preexisting data sets [@weston2019recommendations]
+* OSF preregistration [forms and templates](https://osf.io/zab38/wiki/home/){target="_blank"}
+
+# Open Materials {#authors-open-materials}
+
+Provide research materials and description of procedures necessary to conduct an independent replication of the research.
+
+If research materials are secondary, they should be cited rather than shared directly (see Section\ \@ref(authors-citation)). Include any information on how others can also obtain the materials.
+
+If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
+
+## Tips {#authors-materials-tips}
+
+### Add a license
+
+If you share your materials, including any figures in the manuscript, using an open license such as CC-BY, this makes reuse straightforward. See Appendix\ \@ref(licenses) for more details.
+
+# Open Data {#authors-open-data}
+
+Open data should include all variables, treatment conditions, and observations described in the manuscript, and provide a full account of the procedures used to collect, preprocess, clean, or generate the data. This data should allow for the reproduction of any plots, tables, or analyses reported in the manuscript.
+
+If data are secondary, they should be cited rather than shared directly (see Section\ \@ref(authors-citation)). Include any information on how others can also obtain the data.
+
+## Tips {#authors-data-tips}
+
+### Save it in an accessible format
+
+* Use tab-separated value (.tsv) or comma-separated value (.csv) files
+* Use UTF-8 (or UTF-16) encoding to avoid problems in an international context (e.g., so characters like ü or é aren't mangled) 
+
+Excel is less preferable because of the proprietary format and its tendency to mangle anything that resembles a date. SPSS and other proprietary formats are also not ideal, but data in a proprietary format is better than no data.
+
+### Include a codebook
+
+* <span class="beginner">Beginner</span>: include a text file with each column name and an explanation 
+* <span class="intermediate">Intermediate</span>: You can include a data dictionary with further info like data type (string, numeric) or possible ranges/values [@buchanan2021getting]
+* <span class="intermediate">Intermediate</span>: Use `faux::codebook()` to make a [machine-readable codebook](https://debruine.github.io/faux/articles/codebook.html){target="_blank"} in PsychDS format
+* <span class="intermediate">Intermediate</span>: Use the R [codebook](https://rubenarslan.github.io/codebook/articles/codebook_tutorial.html){target="_blank"} to include a report with detailed metadata [@horstmann2020generating]
+
+
+### Ethical sharing
+
+* Check that you are not sharing any identifiable data (without clear consent), such as names, student ID numbers, postcodes, IP addresses, or uniquely identifying combinations of demographic variables.
+* Add a license so others know how they can use the data. See Appendix\ \@ref(licenses) for more details. The most common licenses for data are:
+    * CC-0: Waives all rights and releases work to public domain
+    * CC-BY: By Attribution, which permits sharing and reuse of the material, for any purpose, as long as the original authors are credited
+    * CC-BY-SA: By Attribution, with a Share-Alike clause which means that anyone sharing or modifying the original work must release it under the same license
+* [Practical tips for ethical data sharing](https://doi.org/10.1177/2515245917747656){target="_blank"} (@meyer2018practical)
+
+### Make it findable
+
+* Use a persistent archive to host your data, like the [OSF](https://osf.io){target="_blank"}, [figshare](https://figshare.com/){target="_blank"}, or [zenodo](https://zenodo.org/){target="_blank"}. These platforms are free and can give your data a DOI.
+* Include the citation info in a README
+* Remember to make the data accessible for reviewers before submission. The OSF allows you to create a blinded [review-only link](https://help.osf.io/hc/en-us/articles/360019930333-Create-a-View-only-Link-for-a-Project){target="_blank"}.
+* Make the data accessible to the public before publication.
+* Make sure the paper contains the correct links to the data before publication.
+
+## Resources
+
+* [Guide to Social Science Data Preparation and Archiving](https://www.icpsr.umich.edu/web/pages/deposit/guide/index.html){target="_blank"}
+
+# Open Code {#authors-open-code}
+
+If research code is entirely secondary, it should be cited rather than shared directly (see Section\ \@ref(authors-citation)). However, this is likely to be rare, and research code that is modified in any way from the original should be both cited and shared. 
+
+## Tips {#authors-code-tips}
+
+### Make it reproducible
+
+* Include all the external files (e.g., data files) needed to run it
+* Use relative paths so that it can run on any computer
+* Set a seed if your code uses simulations or random number generation
+
+### Make it clear
+
+* Include a README that explains how to run the code
+* Assume that the audience has varying technical expertise and doesn't necessarily know the conventions of the language you're using
+* Indicate which parts of your code produce any figure, table, or value in your manuscript
+    * <span class="beginner">Beginner</span>: include comments in your code like `# produces Figure 3.1`
+    * <span class="intermediate">Intermediate</span>: Use code the generate the text of the results section so you only have one thing to copy and paste into the manuscript
+    * <span class="advanced">Advanced</span>: Use code to generate the entire manuscript (e.g., using the [papaja](http://frederikaust.com/papaja_man/){target="_blank"} package)
+
+### Indicate software versions
+
+* <span class="beginner">Beginner</span>: Include a text file with the info, e.g., devtools::session_info() in R, or requirements.txt in python
+* <span class="intermediate">Intermediate</span>: Or use dependency management, like [renv](https://rstudio.github.io/renv/articles/renv.html){target="_blank"} or [packrat](https://rstudio.github.io/packrat/){target="_blank"} in R
+* <span class="advanced">Advanced</span>: Or use containers like [Binder](https://mybinder.org/){target="_blank"}, [Docker](https://www.docker.com/){target="_blank"} or [CodeOcean](https://codeocean.com/){target="_blank"} for full reproducibility
+  
+### Confirm reproducibility
+
+* <span class="beginner">Beginner</span>: Access your shared materials from a new computer and run the code
+* <span class="intermediate">Intermediate</span>: Or ask a colleague to try running your code on their machine
+* <span class="intermediate">Intermediate</span>: Or set up more formal code review [@vable2021code] in your group
+* <span class="advanced">Advanced</span>: Or use a service like [CodeCheck](https://codecheck.org.uk/)
+
+NB: If your code takes a very long time to run, such as when you have extremely large datasets or are running simulations, you can include smaller test datasets or run a smaller number of replications and include code at the top of the script to toggle real and test data or low and high numbers of reps.
+
+### Share and license
+
+* Add a license so others know how they can use and modify the code. See Appendix\ \@ref(licenses) for more details.
+* Make your code findable using the same tips from Section\ \@ref(make-it-findable) 
+* [GitHub](https://github.com/){target="_blank"} is a common place to share code, but doesn't create a DOI, so if you use github, consider archiving a snapshot of your repository on [zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content){target="_blank"}.
+
+# Citation {#authors-citation}
+
+Papers using secondary (i.e., from other sources) data, materials, or analysis code must cite those artifacts in the TOP statement. All citations should be to persistent/stable identifiers (DOIs) whenever possible. If creators of data, materials, or code have provided a preferred citation, that source should be cited, along with a way for readers to access the shared material (e.g., on a website or in a repository).
+
+Note, secondary analysis code includes software packages (e.g., R packages), as well as custom analysis code (e.g., code that you, as authors, did not write, but that someone else prepared for a specific use). The majority of papers will have some research software to cite, and it is often overlooked or forgotten. Remember to include version numbers with any software packages. If the amount of information is extensive, a supplementary table can be included with the relevant version and citation information.
+
+You might be tempted to provide citations in other parts of the Method or Results sections (e.g., Analysis Plan for secondary code or Materials for secondary materials), but for completeness, such information should be relocated to the TOP statement. Citations in the TOP statement should be, where possible, to the source of the material, data, software or code, rather than to papers that only describe the material, but do not provide access to it. Such descriptive citations can be included in the main text of the paper, if desired.
+When data, materials, or code are primary (i.e., created by your author team and published alongside your article), remember to openly license those artifacts and see the Open Data, Open Materials, and Open Code sections for more guidance. When data, materials, or code are secondary, make sure to cite those artifacts as described here, and avoid sharing copies those artifacts in full to avoid issues with copyright (unless they are permissively licensed to allow such sharing). 
+
+
+# Authorship {#authors-authorship}
+
+Specifying each author's roles allows for transparent attribution of credit, especially when papers have many authors. The Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/){target="_blank"} or [web app](https://tenzing.club/){target="_blank"} app can help you manage this.
+
+You may include a statement of author contributions whether or not the journal requires CRediT statements. Simply include the statement of contributions in the Author Note unless other directions are provided in a journal’s submission guidelines. See the resources section below for tips on preparing CRediT statements. 
+
+## Roles
+
+* Conceptualization: Ideas; formulation or evolution of overarching research goals and aims.
+* Data curation: Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later re-use.
+* Formal analysis: Application of statistical, mathematical, computational, or other formal techniques to analyse or synthesize study data.
+* Funding acquisition: Acquisition of the financial support for the project leading to this publication.
+* Investigation: Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection.
+* Methodology: Development or design of methodology; creation of models.
+* Project administration: Management and coordination responsibility for the research activity planning and execution.
+* Resources: Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools.
+* Software: Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components.
+* Supervision: Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team.
+* Validation: Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs.
+* Visualization: Preparation, creation and/or presentation of the published work, specifically visualization/data presentation.
+* Writing - original draft: Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation).
+* Writing - review & editing: Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision -- including pre- or post-publication stages.
+
+## Resources
+
+* Tenzing [r package](https://marton-balazs-kovacs.github.io/tenzing/){target="_blank"} and [web app](https://tenzing.club/){target="_blank"}
+* [Casrai CRediT](https://casrai.org/credit/){target="_blank"}
+* Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c){target="_blank"}
+
+
+# Preprints and Postprints {#authors-preprints}
+
+Preprints are author copies of manuscripts prior to acceptance by a journal (preprints are also called "submitted" manuscripts). Postprints are author copies of manuscripts after acceptance for publication by a journal (postprints are also called "accepted" manuscripts). Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication. As of August 2022, all APA core titles allow posting of preprints and postprints without embargo.
+
+Most journals in psychology allow the submission of preprints (submitted manuscripts) to disciplinary repositories like PsyArXiv without embargo or restriction, and a growing number also allow submission of postprints (accepted manuscripts) without any embargo. By contrast, the journal-typeset version of an article is often referred to as the “published version,” and this version is usually subject to more restrictions on sharing. Authors can check [Sherpa Romeo](https://v2.sherpa.ac.uk/romeo/) to verify the policies of the journal to which they are submitting or have been accepted. 
+
+<!--chapter:end:02-authors.Rmd-->
+
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+# psyTeachR styles and functions
+# do not edit!!!!!
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(glossary)
+})
+
+# default knitr options
+knitr::opts_chunk$set(
+  echo       = TRUE,
+  results    = "hold",
+  out.width  = '100%',
+  fig.width  = 8,
+  fig.height = 4.5,
+  fig.align  = 'center'
+)
+
+## set global theme options for figures
+#theme_set(theme_bw())
+
+## set class for a chunk using class="className"
+knitr::knit_hooks$set(class = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class = '%s'>", options$class)
+  } else {
+    "</div>"
+  }
+})
+
+## verbatim code chunks
+knitr::knit_hooks$set(verbatim = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class='verbatim'><pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;{%s}</code></pre>", options$verbatim)
+  } else {
+    "<pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;</code></pre></div>"
+  }
+})
+
+## verbatim inline R in backticks
+backtick <- function(code) {
+  #warning("The backtick() function is deprecated. Use two backticks and a space to surround text with verbatim backticks, e.g. `` `in_backticks` ``")
+  # removes inline math coding when you use >1 $ in a line
+  code <- gsub("\\$", "\\\\$", code)
+  paste0("<code>&#096;", code, "&#096;</code>")
+}
+
+## palette with psyTeachR logo colour
+psyteachr_colours <- function(vals = 1:6) {
+  ptrc <- c(
+    "pink" = "#983E82",
+    "orange" = "#E2A458",
+    "yellow" = "#F5DC70",
+    "green" = "#59935B",
+    "blue" = "#467AAC",
+    "purple" = "#61589C"
+  )
+
+  unname(ptrc[vals])
+}
+psyteachr_colors <- psyteachr_colours
+
+# inline code highlighting and styles
+
+hl <- function(code) {
+  txt <- rlang::enexpr(code) %>% rlang::as_label()
+
+  downlit::highlight(txt, classes = downlit::classes_pandoc()) %>%
+    gsub("a href", "a target='_blank' href", .) %>%
+    paste0("<code>", . , "</code>")
+}
+
+path <- function(txt) {
+  sprintf("<code class='path'>%s</code>", txt)
+}
+
+pkg <- function(txt, url = NULL) {
+  if (is.null(url)) {
+    sprintf("<code class='package'>%s</code>", txt)
+  } else {
+    sprintf("<code class='package'><a href='%s' target='_blank'>%s</a></code>", url, txt)
+  }
+}
+# book-specific code to include on every page
+```
+# (PART) Reviewers {-}
+
+# Transparency and Openness Statements
+
+[What to Check](https://www.dropbox.com/s/8jv2n0j3mlkhkrj/TOP_GuidanceforReviewers.docx){target="_blank"} in TOP statements for journals with TOP Level 1 or Level 2
+
+# Registered Reports
+
+# Preregistration
+
+# Open Materials
+
+# Open Data
+
+# Open Code
+
+# Citation
+
+# Authorship
+
+# Preprints and Postprints
+
+<!--chapter:end:03-reviewers.Rmd-->
+
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+# psyTeachR styles and functions
+# do not edit!!!!!
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(glossary)
+})
+
+# default knitr options
+knitr::opts_chunk$set(
+  echo       = TRUE,
+  results    = "hold",
+  out.width  = '100%',
+  fig.width  = 8,
+  fig.height = 4.5,
+  fig.align  = 'center'
+)
+
+## set global theme options for figures
+#theme_set(theme_bw())
+
+## set class for a chunk using class="className"
+knitr::knit_hooks$set(class = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class = '%s'>", options$class)
+  } else {
+    "</div>"
+  }
+})
+
+## verbatim code chunks
+knitr::knit_hooks$set(verbatim = function(before, options, envir) {
+  if (before) {
+    sprintf("<div class='verbatim'><pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;{%s}</code></pre>", options$verbatim)
+  } else {
+    "<pre class='sourceCode r'><code class='sourceCode R'>&#96;&#96;&#96;</code></pre></div>"
+  }
+})
+
+## verbatim inline R in backticks
+backtick <- function(code) {
+  #warning("The backtick() function is deprecated. Use two backticks and a space to surround text with verbatim backticks, e.g. `` `in_backticks` ``")
+  # removes inline math coding when you use >1 $ in a line
+  code <- gsub("\\$", "\\\\$", code)
+  paste0("<code>&#096;", code, "&#096;</code>")
+}
+
+## palette with psyTeachR logo colour
+psyteachr_colours <- function(vals = 1:6) {
+  ptrc <- c(
+    "pink" = "#983E82",
+    "orange" = "#E2A458",
+    "yellow" = "#F5DC70",
+    "green" = "#59935B",
+    "blue" = "#467AAC",
+    "purple" = "#61589C"
+  )
+
+  unname(ptrc[vals])
+}
+psyteachr_colors <- psyteachr_colours
+
+# inline code highlighting and styles
+
+hl <- function(code) {
+  txt <- rlang::enexpr(code) %>% rlang::as_label()
+
+  downlit::highlight(txt, classes = downlit::classes_pandoc()) %>%
+    gsub("a href", "a target='_blank' href", .) %>%
+    paste0("<code>", . , "</code>")
+}
+
+path <- function(txt) {
+  sprintf("<code class='path'>%s</code>", txt)
+}
+
+pkg <- function(txt, url = NULL) {
+  if (is.null(url)) {
+    sprintf("<code class='package'>%s</code>", txt)
+  } else {
+    sprintf("<code class='package'><a href='%s' target='_blank'>%s</a></code>", url, txt)
+  }
+}
+# book-specific code to include on every page
+```
+# (APPENDIX) Appendices {-} 
+
+# References {-}
+
+<div id="refs"></div>
+
+
+# Glossary
+
+This section will contain a glossary of relevant open science terminology. See also [A community-sourced glossary of open scholarship terms](https://doi.org/10.1038/s41562-021-01269-4){target="_blank"} [@parsons2022community].
+
+```{r, echo = FALSE, eval = FALSE}
+glossary_table(link = FALSE)
+```
+
+
+# Licenses
+
+Shared code, data, and materials (including manuscript figures) should have an explicit license, such as CC-BY. This makes reuse straightforward. 
+
+Authors may wish to contact their research office to discuss appropriate licenses for their situation, as whether research outputs should be licensed to the authors or their place of employment can differ between countries. 
+
+While there is some ambiguity, many recommend against sharing research outputs using a CC-BY-NC licence, which prohibits commercial reuse, including in journal articles, or CC-BY-ND, which prohibits derivative use, such as meta-analyses or replications. 
+
+* [Choosing between licenses](http://blog.psyarxiv.com/2018/05/14/licensing-work-psyarxiv/)
+* [Creative Commons Licenses](https://creativecommons.org)
+* [Open-source licenses](https://opensource.org/licenses) for code
+* [CC BY: what does it mean for scholarly articles?](https://openaccess.ox.ac.uk/2013/06/13/cc-by-what-does-it-mean-for-scholarly-articles-3/)
+* [Licenses for data sharing](https://www.ucl.ac.uk/library/research-support/research-data-management/licenses-data-sharing-creative-commons)
+
+
+# Repositories
+
+See the [Registry of Research Data Repositories](https://www.re3data.org/) for detailed listings of data repositories by subject.
+
+This list is under construction and will summarise important attributes of the data repositories that are most relevant to APA journals. These attributes will include maximum file/project size, limitations, and costs.
+
+```{r, echo = FALSE}
+library(dplyr)
+
+repos <- tibble::tribble(
+  ~name, ~link, ~doi, ~managed, ~versions, ~notes,
+  "UK Data Service", "https://ukdataservice.ac.uk", F, T, NA, "",
+  "Open Science Framework (OSF)", "https://osf.io", T, F, T, "",
+  "Harvard Dataverse", "https://dataverse.harvard.edu/", T, T, NA, "",
+  "Databrary", "https://nyu.databrary.org/", T, T, NA, "storing, streaming, and sharing video and audio recordings",
+  "Figshare", "https://figshare.com/", T, F, T, "",
+  "Zenodo", "https://zenodo.org/", T, F, T, "Links to GitHub for archiving code snapshots",
+  "GitHub", "https://github.com", F, F, T, "Primarily for code",
+  "Inter-university Consortium for Political and Social Research (ICPSR)", "https://www.icpsr.umich.edu/", T, T, T, "",
+  "LDbase", "https://ldbase.org/", F, T, NA,  "NIH-funded, educational and developmental sciences ",
+  "Research Data Center(RDC) at ZPID", "https://rdc-psychology.org/", NA, T, NA, "paid curation service"
+) %>%
+  mutate(service = glue::glue("<a href='{link}'>{name}</a>")) %>%
+  select(service, doi, managed, versions, notes)
+
+DT::datatable(repos, 
+              escape = FALSE, 
+              rownames = FALSE,
+              filter = "top",
+              options = list(dom="ltipr"))
+```
+
+
+## Registries
+
+[Comparison of Preregistration Platforms](https://osf.io/preprints/metaarxiv/zry2u) [@haroz_2022]
+
+```{r, echo = FALSE, fig.cap="Figure reproduced from Haroz, 2022"}
+knitr::include_graphics("images/reg-repos-haroz.png")
+```
+
+
+* [As Predicted](https://aspredicted.org/)
+* [ClinicalTrials.gov](https://clinicaltrials.gov/)
+* [Open Science Framework (OSF)](https://osf.io)
+* [The American Economic Association's registry for randomized controlled trials](https://www.socialscienceregistry.org/)
+* [EGAP Design Registration](https://egap.org/registry-0/)
+* [Registry for International Development Impact Evaluations](http://ridie.3ieimpact.org/)
+* [OSF Registered Report protocol registration](https://osf.io/rr/)
+
+
+<!--chapter:end:app-0.Rmd-->
+

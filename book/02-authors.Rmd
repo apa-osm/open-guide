@@ -187,7 +187,7 @@ You may include a statement of author contributions whether or not the journal r
 * Holcombe's accessible [intro to CRediT, using tenzing](https://alexholcombe.medium.com/announcing-tenzing-ceca6789d88c){target="_blank"}
 
 
-# Preprints {#authors-preprints}
+# Preprints and Postprints {#authors-preprints}
 
 Preprints are author copies of manuscripts prior to acceptance by a journal (preprints are also called "submitted" manuscripts). Postprints are author copies of manuscripts after acceptance for publication by a journal (postprints are also called "accepted" manuscripts). Sharing preprints and postprints increases access to research. Papers are indexed by Google Scholar and Europe PMC, increasing discoverability. Preprint authors also have the chance to receive feedback on their work, improving its quality prior to publication. As of August 2022, all APA core titles allow posting of preprints and postprints without embargo.
 
