@@ -51,7 +51,7 @@ When preparing your preregistration for inclusion in your manuscript, here are a
 
 Provide research materials and description of procedures necessary to conduct an independent replication of the research.
 
-If research materials are secondary, they should be cited rather than shared directly (see Section\ \@ref(authors-citation)). Include any information on how others can also obtain the materials.
+If research materials are secondary (i.e., taken from existing sources), they should be cited rather than shared directly (see Section\ \@ref(authors-citation)), especially when those existing materials have reuse restrictions (e.g., copyrighted materials). Include any information on how others can also obtain the materials.
 
 If research materials are proprietary, include information on how to obtain them (if possible) and/or how to replicate them. For example, face images may not be shareable, but the procedure for generating the specific images used in a study can be included instead.
 
@@ -81,7 +81,7 @@ Excel is less preferable because of the proprietary format and its tendency to m
 * <span class="beginner">Beginner</span>: include a text file with each column name and an explanation 
 * <span class="intermediate">Intermediate</span>: You can include a data dictionary with further info like data type (string, numeric) or possible ranges/values [@buchanan2021getting]
 * <span class="intermediate">Intermediate</span>: Use `faux::codebook()` to make a [machine-readable codebook](https://debruine.github.io/faux/articles/codebook.html){target="_blank"} in PsychDS format
-* <span class="intermediate">Intermediate</span>: Use the R [codebook](https://rubenarslan.github.io/codebook/articles/codebook_tutorial.html){target="_blank"} to include a report with detailed metadata [@horstmann2020generating]
+* <span class="intermediate">Intermediate</span>: Use the R [codebook](https://rubenarslan.github.io/codebook/articles/codebook_tutorial.html){target="_blank"} package to include a report with detailed metadata [@horstmann2020generating]
 
 
 ### Ethical sharing
